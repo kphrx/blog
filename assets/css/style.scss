@@ -76,4 +76,11 @@ body {
   }
 }
 
+.markdown-body dl {
+  & > dt, & > dd {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 @import "highlight";
