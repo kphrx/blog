@@ -1,0 +1,161 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+:root {
+    --base03:   #002b36;
+    --base02:   #073642;
+    --base01:   #586e75;
+    --base00:   #657b83;
+    --base0:    #839496;
+    --base1:    #93a1a1;
+    --base2:    #eee8d5;
+    --base3:    #fdf6e3;
+
+    @media (prefers-color-scheme: dark) {
+        --base03:    #fdf6e3;
+        --base02:    #eee8d5;
+        --base01:    #93a1a1;
+        --base00:    #839496;
+        --base0:   #657b83;
+        --base1:   #586e75;
+        --base2:   #073642;
+        --base3:   #002b36;
+    }
+}
+
+h1.project-name > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+div.highlight pre {
+    border: none;
+    border-radius: unset !important;
+
+    background-color: var(--base3) !important;
+    color: var(--base00);
+
+    .w {
+        color: var(--base01);
+    }
+    .err {
+        color: var(--base03);
+        background-color: $red;
+    }
+    .c, .cd, .cm, .c1, .cs {
+        color: var(--base1);
+    }
+    .cp {
+        color: $yellow;
+    }
+    .nt {
+        color: $yellow;
+    }
+    .o, .ow {
+        color: var(--base1);
+    }
+    .p, .pi {
+        color: var(--base1);
+    }
+    .gi {
+        color: $green;
+    }
+    .gd {
+        color: $red;
+    }
+    .gh {
+        color: $blue;
+        background-color: var(--base03);
+        font-weight: bold;
+    }
+    .k, .kn, .kp, .kr, .kv {
+        color: $violet;
+    }
+    .kc {
+        color: $orange;
+    }
+    .kt {
+        color: $orange;
+    }
+    .kd {
+        color: $orange;
+    }
+    .s, .sb, .sc, .sd, .s2, .sh, .sx, .s1 {
+        color: $green;
+    }
+    .sr {
+        color: $cyan;
+    }
+    .si {
+        color: $magenta;
+    }
+    .se {
+        color: $magenta;
+    }
+    .nn {
+        color: $yellow;
+    }
+    .nc {
+        color: $yellow;
+    }
+    .no {
+        color: $yellow;
+    }
+    .na {
+        color: $blue;
+    }
+    .m, .mf, .mh, .mi, .il, .mo, .mb, .mx {
+        color: $green;
+    }
+    .ss {
+        color: $green;
+    }
+}
+
+pre.highlight {
+    padding: 0 !important;
+    overflow: visible !important;
+
+    table.rouge-table {
+        tr {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        td {
+            padding: 0;
+            border: none;
+
+            &.rouge-gutter.gl {
+                position: absolute;
+
+                pre.lineno {
+                    background-color: var(--base2);
+                    color: var(--base1);
+                    text-align: right;
+                    padding: .3em 1ex .3em;
+                    width: 5ex;
+                }
+            }
+
+            &.rouge-code {
+                padding-left: 5ex;
+                pre {
+                    padding: .3em 1ex .3em;
+                }
+            }
+        }
+    }
+}
