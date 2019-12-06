@@ -13,8 +13,7 @@ preに行番号つけたかった。Demoの `pre` に適用しています
 
 この方法でいくつも書くとするとCGIやJSに頼る必要があると思います
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## Demo
 <style>

@@ -11,8 +11,7 @@ title: |
 
 <!--more-->
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## Windows 10 Professional リテール版について
 C#でクロスプラットフォーム開発したいなぁとか思ってたのでWindowsが欲しかった  

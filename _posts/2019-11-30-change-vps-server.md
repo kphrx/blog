@@ -11,8 +11,7 @@ title: |
 
 <!--more-->
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## さくらのVPSについて
 最近バージョンがアップしたか何かで値段がちょっと安くなっていて、『Nintendo Switch』が当たるみたいなキャンペーンもあったのでちょっと使ってみようかなと言う感じに

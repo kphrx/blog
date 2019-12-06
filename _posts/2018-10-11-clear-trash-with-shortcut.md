@@ -11,8 +11,7 @@ Windows使っててゴミ箱空にするのがめんどくさいと感じたの�
 
 <!--more-->
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## 方法
 ショートカットを新規作成でPowerShellコマンドを実行するショートカットを作成します。他のサイトで書いてあったりしますが、cmd.exeでPowerShell.exeを叩くとか訳がわからないのでもっと簡潔なコマンドで作ります  

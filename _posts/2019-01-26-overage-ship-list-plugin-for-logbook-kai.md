@@ -14,8 +14,7 @@ title: |
 
 <!--more-->
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## 導入
 `overageship.jar` をlogbook-kaiのあるディレクトリ内の `plugins` ディレクトリに入れて再起動してください

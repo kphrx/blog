@@ -15,8 +15,7 @@ title: |
 
 ここにわざわざ書くことではないけど忘れると思うからmodリストをメモ
 
-* Table Of Contents
-{:toc}
+{% include toc.md %}
 
 ## Mod リスト
 隠し満腹度の表示とか連鎖破壊modとかそういうやつ  
