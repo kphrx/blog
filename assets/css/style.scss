@@ -3,25 +3,7 @@
 
 @import "{{ site.theme }}";
 
-:root {
-  --text-color: #24292e;
-  --heading-color: #24292e;
-  --border-color: #eaecef;
-  --bg-color: #fff;
-  --table-bg-color: transparent;
-  --table-bg-accent: #f9f9f9;
-  --table-border-color: #dfe2e5;
-
-  @media (prefers-color-scheme: dark) {
-    --text-color: #bebebe;
-    --heading-color: #cdcdcd;
-    --border-color: #343434;
-    --bg-color: #191919;
-    --table-bg-color: #1c1c1c;
-    --table-bg-accent: #141414;
-    --table-border-color: #343434;
-  }
-}
+@import "variables";
 
 body {
   color: var(--text-color);
@@ -29,83 +11,61 @@ body {
 }
 
 .markdown-body {
-  h1, h2 {
-    color: var(--heading-color);
-    border-color: var(--border-color);
-  }
+  @import "heading";
+  @import "table";
+  @import "description-list";
 
-  dl {
-    & > dt, & > dd {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  table {
-    tr {
-      background-color: var(--table-bg-color);
-
-      &:nth-of-type(even) {
-        background-color: var(--table-bg-accent);
-      }
-    }
-
-    th, td {
-      border-color: var(--table-border-color);
-    }
-  }
-}
-
-.post-header {
-  & > .post-meta {
-    margin-bottom: 0;
-  }
-
-  & > .post-title {
-    margin-top: 0;
-    font-size: 1.8em;
-  }
-
-  & > .eye-catch {
-    margin: 0;
-    width: 100%;
-
-    & > img {
-      object-fit: contain;
-      height: auto;
-      max-height: 50vh;
-    }
-  }
-}
-
-.post-wrap {
-  color: var(--text-color);
+  @import "table-of-contents";
+  @import "highlight";
 
   .post-header {
-    & > .post-title {
+    & > .post-meta {
       margin-bottom: 0;
-      border: none;
+    }
+
+    & > .post-title {
+      margin-top: 0;
+      font-size: 1.8em;
     }
 
     & > .eye-catch {
-      float: right;
-      width: 32%;
-      max-width: 320px;
+      margin: 0;
+      width: 100%;
 
       & > img {
-        object-fit: cover;
-        float: right;
-        height: 96px;
-        max-height: 96px;
+        object-fit: contain;
+        height: auto;
+        max-height: 50vh;
       }
     }
   }
 
-  &:not(:last-child) > .post {
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 1em;
+  .post-wrap {
+    color: var(--text-color);
+
+    .post-header {
+      & > .post-title {
+        margin-bottom: 0;
+        border: none;
+      }
+
+      & > .eye-catch {
+        float: right;
+        width: 32%;
+        max-width: 320px;
+
+        & > img {
+          object-fit: cover;
+          float: right;
+          height: 96px;
+          max-height: 96px;
+        }
+      }
+    }
+
+    &:not(:last-child) > .post {
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1em;
+    }
   }
 }
-
-@import "table-of-contents";
-@import "highlight";

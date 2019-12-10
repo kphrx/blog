@@ -1,0 +1,51 @@
+:root {
+  --text-color: #24292e;
+  --heading-color: #24292e;
+  --border-color: #eaecef;
+  --bg-color: #fff;
+  --table-bg-color: transparent;
+  --table-bg-accent: #f9f9f9;
+  --table-border-color: #dfe2e5;
+
+  @media (prefers-color-scheme: dark) {
+    --text-color: #bebebe;
+    --heading-color: #cdcdcd;
+    --border-color: #4c4c4c;
+    --bg-color: #191919;
+    --table-bg-color: #1c1c1c;
+    --table-bg-accent: #141414;
+    --table-border-color: #343434;
+  }
+}
+
+// code block highlight
+$yellow:  #b58900;
+$orange:  #cb4b16;
+$red:     #dc322f;
+$magenta: #d33682;
+$violet:  #6c71c4;
+$blue:    #268bd2;
+$cyan:    #2aa198;
+$green:   #859900;
+
+:root {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0:  #839496;
+  --base1:  #93a1a1;
+  --base2:  #eee8d5;
+  --base3:  #fdf6e3;
+
+  @media (prefers-color-scheme: dark) {
+    --base03: #fdf6e3;
+    --base02: #eee8d5;
+    --base01: #93a1a1;
+    --base00: #839496;
+    --base0:  #657b83;
+    --base1:  #586e75;
+    --base2:  #073642;
+    --base3:  #002b36;
+  }
+}

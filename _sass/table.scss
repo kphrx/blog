@@ -1,0 +1,13 @@
+table {
+  tr {
+    background-color: var(--table-bg-color);
+
+    &:nth-of-type(even) {
+      background-color: var(--table-bg-accent);
+    }
+  }
+
+  th, td {
+    border-color: var(--table-border-color);
+  }
+}
