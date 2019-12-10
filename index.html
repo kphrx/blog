@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="posts">
+<main class="posts">
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
     <a class="post-wrap" href="{{ post.url | relative_url }}" title="{{ post.title }}">
@@ -16,13 +16,11 @@ layout: default
                 <p class="post-meta">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</p>
                 <h1 class="post-title">{{ post.title }}</h1>
             </header>
-            <main>
-                {{ post.excerpt }}
-            </main>
+            {{ post.excerpt }}
         </article>
     </a>
 {% endfor %}
-</div>
+</main>
 
 <!-- Pagination links -->
 <div class="pagination">
