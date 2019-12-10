@@ -7,11 +7,14 @@
   --text-color: #24292e;
   --heading-color: #24292e;
   --bg-color: #fff;
+  --table-bg-color: transparent;
+  --table-bg-accent: #f9f9f9;
 
   @media (prefers-color-scheme: dark) {
     --text-color: #bebebe;
     --heading-color: #cdcdcd;
     --bg-color: #191919;
+    --table-bg-accent: #1f1f1f;
   }
 }
 
@@ -20,8 +23,25 @@ body {
   background-color: var(--bg-color);
 }
 
-.markdown-body h2 {
-  color: var(--heading-color);
+.markdown-body {
+  h2 {
+    color: var(--heading-color);
+  }
+
+  dl {
+    & > dt, & > dd {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  table tr {
+    background-color: var(--table-bg-color);
+
+    &:nth-of-type(even) {
+      background-color: var(--table-bg-accent);
+    }
+  }
 }
 
 .post-header {
@@ -73,13 +93,6 @@ body {
   &:not(:last-child) > .post {
     border-bottom: 1px solid #eaecef;
     margin-bottom: 1em;
-  }
-}
-
-.markdown-body dl {
-  & > dt, & > dd {
-    margin-top: 0;
-    margin-bottom: 0;
   }
 }
 
