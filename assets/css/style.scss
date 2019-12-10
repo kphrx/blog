@@ -6,15 +6,20 @@
 :root {
   --text-color: #24292e;
   --heading-color: #24292e;
+  --border-color: #eaecef;
   --bg-color: #fff;
   --table-bg-color: transparent;
   --table-bg-accent: #f9f9f9;
+  --table-border-color: #dfe2e5;
 
   @media (prefers-color-scheme: dark) {
     --text-color: #bebebe;
     --heading-color: #cdcdcd;
+    --border-color: #343434;
     --bg-color: #191919;
-    --table-bg-accent: #1f1f1f;
+    --table-bg-color: #1c1c1c;
+    --table-bg-accent: #141414;
+    --table-border-color: #343434;
   }
 }
 
@@ -24,8 +29,9 @@ body {
 }
 
 .markdown-body {
-  h2 {
+  h1, h2 {
     color: var(--heading-color);
+    border-color: var(--border-color);
   }
 
   dl {
@@ -35,11 +41,17 @@ body {
     }
   }
 
-  table tr {
-    background-color: var(--table-bg-color);
+  table {
+    tr {
+      background-color: var(--table-bg-color);
 
-    &:nth-of-type(even) {
-      background-color: var(--table-bg-accent);
+      &:nth-of-type(even) {
+        background-color: var(--table-bg-accent);
+      }
+    }
+
+    th, td {
+      border-color: var(--table-border-color);
     }
   }
 }
@@ -52,7 +64,6 @@ body {
   & > .post-title {
     margin-top: 0;
     font-size: 1.8em;
-    color: var(--heading-color);
   }
 
   & > .eye-catch {
@@ -91,7 +102,7 @@ body {
   }
 
   &:not(:last-child) > .post {
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid var(--border-color);
     margin-bottom: 1em;
   }
 }
