@@ -4,7 +4,7 @@ date:       2019-03-08 20:17:37 +0900
 category:   blog
 
 title: |
-  Nginxの ssl_certificate は使い物にならない
+  Nginxのssl_certificateでの変数は使い物にならない
 ---
 
 Nginx 1.15.9から `ssl_certificate` で変数を利用することが可能になったけど利用を諦めた理由です
