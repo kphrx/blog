@@ -153,7 +153,7 @@ OSと `cat /proc/cpuinfo` の結果を載せておきます
 
 現在はJekyll on GitHub Pagesで動いています。使い勝手とかが悪くなければ今後もここに置いたままにしますが何か不都合ができたり他にいいホスティングサービスが見つかるなどすれば移転を考えています
 
-そしてドメインですが、'19に入って `kpherox.dev` のドメインを取得していて、サーバーを引っ越す前まではPleromaのドメインにしか使えていませんでした。それから `kpherox.github.io` の代わりに `github.kpherox.dev` を使うようにしていますがこれも一時的なものになるので実質Pleromaの[pl.kpherox.dev](https://pl.kpherox.dev)のみです
+そしてドメインですが、'19に入って `kpherox.dev` のドメインを取得していていたのでこれを機にWebサイトのすべてドメインを変更。サーバーを引っ越す前まではPleromaのドメインにしか使っていませんでした。（`kpherox.github.io` に `github.kpherox.dev` を使うようにしてたけど仮にあててただけ）
 
 ### Laravel製の自作アプリ
 Laravelなので当然PHPです。これは旧サーバーと共に破棄される予定です
