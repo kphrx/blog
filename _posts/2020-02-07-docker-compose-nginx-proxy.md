@@ -104,9 +104,7 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy:alpine
     restart: always
-    ports:
-      - "443:443"
-      - "80:80"
+    network_mode: host
     environment:
       - ENABLE_IPV6=true
       - VIRTUAL_HOST=kpherox.dev,www.kpherox.dev
