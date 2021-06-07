@@ -4,7 +4,10 @@ layout: default
 
 <main class="post">
     <header class="post-header">
-        <p class="post-meta">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</p>
+        <p class="post-meta">
+            {{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}
+            <a href="https://github.com/kPherox/blog/commits/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">History</a>
+        </p>
         <h1 class="post-title">{{ page.title }}</h1>
         {% if page.eye_catch %}
         <figure class="eye-catch">
