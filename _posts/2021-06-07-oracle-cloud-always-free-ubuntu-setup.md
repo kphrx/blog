@@ -42,9 +42,9 @@ Ubuntu Minimal には `emacs` も `nano` も `vim` や `vi` ですら入って�
 sudo sed -i'' -e's#//\(Unattended-Upgrade::\(Remove-Unused-Dependencies\|Automatic-Reboot\) "\)false\(";\)#\1true\3#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
-`Unattended-Upgrade::Automatic-Reboot "true"` にした時の再起動の時間を深夜2時から深夜4時にする
+`Unattended-Upgrade::Automatic-Reboot "true"` にした時の再起動の時間を 02:00 UTC から 04:00 JST にする
 ```sh
-sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "0\)2\(:00";\)#\14\2#' /etc/apt/apt.conf.d/50unattended-upgrades
+sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "\)02\(:00";\)#\119\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
 ### メール通知
