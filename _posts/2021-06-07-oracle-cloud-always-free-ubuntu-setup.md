@@ -133,4 +133,4 @@ table ip filter {
 ```
 
 ## 注釈
-[^1]: https://docs.oracle.com/ja-jp/iaas/Content/Network/Concepts/ipv6.htm > IPv6アドレス指定は、現在、米国Government Cloudでのみサポートされています。すべての米国Government Cloudのお客様を参照してください。
+[^1]: <https://docs.oracle.com/ja-jp/iaas/Content/Network/Concepts/ipv6.htm> > IPv6アドレス指定は、現在、米国Government Cloudでのみサポートされています。すべての米国Government Cloudのお客様を参照してください。
