@@ -84,7 +84,7 @@ Oracle Cloud でのファイアウォールの設定まだわかってないの�
 
 Oracle Cloud の日本リージョンではまだ IPv6 の Public IP を貰えないので[^1] IPv6 をここで使えるようにする意味は基本的にない
 
-Oracle Cloud VCN で相互に通信する必要がある場合は `ip daddr 10.0.0.0/24 accept` などで Private IP は素通りさせるように設定する必要があるかもしれない？
+~~Oracle Cloud VCN で相互に通信する必要がある場合は `ip daddr 10.0.0.0/24 accept` などで Private IP は素通りさせるように設定する必要があるかもしれない？~~
 
 ```nft
 #!/usr/sbin/nft -f
@@ -130,6 +130,14 @@ table ip filter {
 		mark set 1
 	}
 }
+```
+
+`iptables-restore` を呼んでいる `netfilter-persistent.service` を無効にして `nftables.service` を有効化する
+
+```sh
+sudo systemctl disable netfilter-persistent
+sudo systemctl enable nftables
+sudo reboot
 ```
 
 ## 注釈
