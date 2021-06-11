@@ -80,9 +80,11 @@ sudo sed -i'' -e's#//\(Unattended-Upgrade::MailReport "\)on-change\(";\)#\1only-
 ```
 
 ## nftables
-Oracle Cloud でのファイアウォールの設定まだわかってないので、ひとまず nftables で IPv4 と IPv6 両方使えるようにして ping と ssh http/https を許可して Docker のループバックができるような感じの設定を `/etc/nftables.conf` に書き込む
+~~Oracle Cloud でのファイアウォールの設定まだわかってないので、~~ひとまず nftables で IPv4 と IPv6 両方使えるようにして ping と ssh http/https を許可して Docker のループバックができるような感じの設定を `/etc/nftables.conf` に書き込む
 
-Oracle Cloud の日本リージョンではまだ IPv6 の Public IP を貰えないので[^1] IPv6 をここで使えるようにする意味は基本的にない
+~~Oracle Cloud の日本リージョンではまだ IPv6 の Public IP を貰えないので[^1] IPv6 をここで使えるようにする意味は基本的にない~~英語のページで全てのリージョンでIPv6サポートしてるよって書いてあった[^2]。日本語も更新してくれ……
+
+Oracle Cloud では cloud-init サービス が `dhclient` を呼ぶことで VNIC で割り当てた IPv6 がネットワークインターフェースに追加されるので dhcpv6-client(546/udp) を開けておく必要がある
 
 ~~Oracle Cloud VCN で相互に通信する必要がある場合は `ip daddr 10.0.0.0/24 accept` などで Private IP は素通りさせるように設定する必要があるかもしれない？~~
 
@@ -122,6 +124,8 @@ table inet filter {
 	chain UDP {
 		udp dport domain accept
 		udp dport https accept
+		udp dport dhcpv6-client accept
+		udp dport dhcpv6-server accept
 	}
 }
 
@@ -141,4 +145,10 @@ sudo reboot
 ```
 
 ## 注釈
-[^1]: <https://docs.oracle.com/ja-jp/iaas/Content/Network/Concepts/ipv6.htm> > IPv6アドレス指定は、現在、米国Government Cloudでのみサポートされています。すべての米国Government Cloudのお客様を参照してください。
+[^1]:
+    IPv6アドレス指定は、現在、米国Government Cloudでのみサポートされています。すべての米国Government Cloudのお客様を参照してください。  
+    <https://docs.oracle.com/ja-jp/iaas/Content/Network/Concepts/ipv6.htm>
+
+[^2]:
+    IPv6 addressing is supported for all commercial and government regions.  
+    <https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/ipv6.htm>
