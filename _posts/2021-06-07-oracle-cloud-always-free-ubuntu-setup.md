@@ -4,7 +4,7 @@ date:       2021-06-07 02:50:15 +0900
 category:   blog
 
 title: |
-  Oracle Cloud Always Free tier の Canonical Ubuntu 20.04 (Minimal) のセットアップ
+  Oracle Cloud Always Free の Canonical Ubuntu 20.04 (Minimal) のセットアップ
 ---
 
 Oracle Cloud の Always Free で APT と Docker + nftables の設定をする
