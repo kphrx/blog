@@ -43,8 +43,14 @@ sudo sed -i'' -e's#//\(Unattended-Upgrade::\(Remove-Unused-Dependencies\|Automat
 ```
 
 `Unattended-Upgrade::Automatic-Reboot "true"` にした時の再起動の時間を 02:00 UTC から 04:00 JST にする
+- 19:00 UTC で日本時間4時にする
 ```sh
 sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "\)02\(:00";\)#\119\2#' /etc/apt/apt.conf.d/50unattended-upgrades
+```
+- timezone を `Asia/Tokyo` にして 04:00 JST を設定する
+```sh
+sudo timedatectl set-timezone Asia/Tokyo
+sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "\)02\(:00";\)#\104\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
 ### メール通知
