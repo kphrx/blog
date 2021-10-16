@@ -17,9 +17,9 @@ Oracle Cloud の Canonical Ubuntu 20.04 (Minimal) は何も設定しないと、
 
 ## `APT::Install-*` と Docker と nftables をまとめて設定
 GitHub Gist でスクリプトを公開してあるので `curl | bash` してしまう  
-<https://gist.github.com/kPherox/ae6f2dfd0e12ba70a8f6c9d338272ba7>
+<https://gist.github.com/kphrx/ae6f2dfd0e12ba70a8f6c9d338272ba7>
 ```sh
-curl -fsSL https://gist.github.com/kPherox/ae6f2dfd0e12ba70a8f6c9d338272ba7/raw/ubuntu_minimal_docker_nftables_install.bash | bash
+curl -fsSL https://gist.github.com/kphrx/ae6f2dfd0e12ba70a8f6c9d338272ba7/raw/ubuntu_minimal_docker_nftables_install.bash | bash
 ```
 
 やってることは順番に
@@ -27,7 +27,7 @@ curl -fsSL https://gist.github.com/kPherox/ae6f2dfd0e12ba70a8f6c9d338272ba7/raw/
 2. Docker の Ubuntu 用 Repository の GPG key を取得
 3. APT のソースリストに Docker Repository を追加
 4. APT の更新
-5. `docker-ce` と依存関係の `docker-ce-cli`, `containerd.io` と `nftables` のインストール
+5. `docker-ce` (と依存関係の `docker-ce-cli`, `containerd.io`) と `nftables` のインストール
 6. Docker が利用する iptables を iptables-nft にして nftables を使うようにする
 7. これを実行してるユーザーを `docker` group に追加して `sudo` 無しで `docker` を使えるようにする
 
