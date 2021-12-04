@@ -67,7 +67,7 @@ aniファイルを使う際にはPNGなどに変換する必要があります
 私がわかってる範囲ですので遭遇したことのないものはよくわかりません
 
 またMacのデフォルトの状態は **[Capes]** > **[Dump Cursors…]** で出力できますがダウンロードできる状態でも置いておきます  
-[Google Drive](https://drive.google.com/open?id=0B5KXUM3vvjTJZS0xd3ZBMjBoZzQ)にアクセスしていただき `com.apple.mousecape.dump.default.cape` をダウンロードしてください
+[Google Drive](https://drive.google.com/drive/folders/0B5KXUM3vvjTJZS0xd3ZBMjBoZzQ?resourcekey=0-DfCWRVAQsanJ_h78IsuwSw&usp=sharing)にアクセスしていただき *com.apple.mousecape.dump.default.cape* をダウンロードしてください
 
 <dl>
   <dt>Alias</dt>
