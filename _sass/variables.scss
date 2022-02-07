@@ -1,5 +1,6 @@
 :root {
   --text-color: #24292e;
+  --text-sub-color: #6e7781;
   --heading-color: #24292e;
   --border-color: #eaecef;
   --bg-color: #fff;
@@ -9,6 +10,7 @@
 
   @media (prefers-color-scheme: dark) {
     --text-color: #bebebe;
+    --text-sub-color: #484f58;
     --heading-color: #cdcdcd;
     --border-color: #4c4c4c;
     --bg-color: #191919;
