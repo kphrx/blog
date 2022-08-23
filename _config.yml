@@ -9,9 +9,7 @@ excerpt_separator: <!--more-->
 
 theme: jekyll-theme-primer
 
-lang: ja-JP
-
-google_analytics: UA-63223106-4
+lang: ja
 
 plugins:
   - jekyll-feed
@@ -34,3 +32,6 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+
+feed:
+  excerpt_only: true
