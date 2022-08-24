@@ -19,7 +19,8 @@ group :jekyll_plugins do
 
   gem "jekyll-titles-from-headings", "~> 0.5" # Page title
 
-  gem "jekyll-paginate", "~> 1.1" # Pagination
+  # gem "jekyll-paginate", "~> 1.1" # Pagination
+  gem "jekyll-paginate-v2", "~> 3.0"
 
   # gem "jekyll-default-layout", "~> 0.1" # Automatically sets layout
 

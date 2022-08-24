@@ -1,8 +1,11 @@
 title: kPherox Blog
 description: My Notes
 
-paginate: 10
-paginate_path: /page/:num
+pagination:
+  enabled: true
+  sort_reverse: true
+  per_page: 10
+  permalink: /page/:num.html
 
 permalink: /:categories/:slug:output_ext
 excerpt_separator: <!--more-->
