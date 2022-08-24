@@ -2,3 +2,18 @@ h1, h2 {
   color: var(--heading-color);
   border-color: var(--border-color);
 }
+
+.site-title {
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3em;
+  display: block;
+  color: var(--heading-color);
+  border-bottom: 1px solid var(--border-color);
+
+  & > a {
+    color: inherit;
+  }
+}
+}
