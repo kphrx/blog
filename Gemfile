@@ -32,7 +32,7 @@ group :jekyll_plugins do
 
   # gem "jekyll-mentions" "~> 1.6" # `@mention` format
 
-  # gem "jekyll-octicons" # GitHub's icons tag
+  gem "jekyll-octicons" # GitHub's icons tag
   # gem "jemoji", "~> 0.12" # GitHub's emoji codes
   # gem "jekyll-avatar", "~> 0.8" # GitHub user's avatar tag
 

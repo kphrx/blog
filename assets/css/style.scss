@@ -25,6 +25,14 @@ body {
   .post-header {
     & > .post-meta {
       margin-bottom: 0;
+      & > .post-edit-history > a {
+        color: var(--text-color);
+        font-weight: 500;
+        > svg {
+          width: 18px;
+          height: 20px;
+        }
+      }
     }
 
     & > .post-title {
@@ -71,5 +79,9 @@ body {
       border-bottom: 1px solid var(--border-color);
       margin-bottom: 1em;
     }
+  }
+
+  .anchorjs-link, .reversefootnote {
+    color: var(--text-sub-color);
   }
 }
