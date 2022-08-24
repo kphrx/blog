@@ -11,13 +11,6 @@ theme: jekyll-theme-primer
 
 lang: ja
 
-plugins:
-  - jekyll-feed
-  - jekyll-octicons
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
 markdown: kramdown
 highlighter: rouge
 
@@ -26,7 +19,7 @@ kramdown:
   syntax_highlighter: rouge
 
   syntax_highlighter_opts:
-    css_class: 'highlight'
+    css_class: highlight
     span:
       line_numbers: false
     block:
