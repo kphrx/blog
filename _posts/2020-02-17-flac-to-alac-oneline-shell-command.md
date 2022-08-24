@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2020-02-17 20:13:06 +0900
 category:   blog
 

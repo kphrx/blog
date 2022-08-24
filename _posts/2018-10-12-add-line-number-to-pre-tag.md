@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2018-10-12 18:08:07 +0900
 category:   coding
 

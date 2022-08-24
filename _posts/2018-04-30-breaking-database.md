@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2018-04-30 19:57:35 +0900
 category:   blog
 

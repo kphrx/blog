@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2018-10-14 22:56:01 +0900
 category:   minecraft
 redirect_from:

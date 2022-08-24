@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2021-06-07 02:50:15 +0900
 category:   blog
 

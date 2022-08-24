@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2016-04-11 00:00:01 +0900
 eye_catch:  https://i.imgur.com/9LZ8GX9.png
 category:   minecraft

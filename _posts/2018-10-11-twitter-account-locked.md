@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2018-10-11 15:14:38 +0900
 eye_catch:  /images/eye-catch/blog/twitter-account-locked.png
 category:   blog

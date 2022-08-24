@@ -22,7 +22,7 @@ group :jekyll_plugins do
   # gem "jekyll-paginate", "~> 1.1" # Pagination
   gem "jekyll-paginate-v2", "~> 3.0"
 
-  # gem "jekyll-default-layout", "~> 0.1" # Automatically sets layout
+  gem "jekyll-default-layout", "~> 0.1" # Automatically sets layout
 
   # gem "jekyll-relative-links", "~> 0.6" # Relative links to markdown file
   gem "jekyll-redirect-from", "~> 0.16" # Redirection from another posts

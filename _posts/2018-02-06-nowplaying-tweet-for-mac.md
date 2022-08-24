@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2018-02-06 00:00:54 +0900
 category:   macos
 

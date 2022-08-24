@@ -1,5 +1,4 @@
 ---
-layout:     post
 date:       2019-01-26 06:04:26 +0900
 category:   kancolle
 redirect_from:
