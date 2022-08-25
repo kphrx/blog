@@ -21,27 +21,27 @@ Mac OS X でマウスのカーソル(ポインター)を変更できるアプリ
 
 ## 使用方法
 1. <kbd><kbd>&#8984; Cmd</kbd>+<kbd>N</kbd></kbd>もしくはメニューバーの **[File]** > **[New Cape]** で新しいcape(設定)を作成  
-![New Cape 1]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/new-cape-1.png' | relative_url }})  
-![New Cape 2]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/new-cape-2.png' | relative_url }})
+![New Cape 1](/assets/images/macos/howto-mouse-cursor-change-for-macosx/new-cape-1.png)  
+![New Cape 2](/assets/images/macos/howto-mouse-cursor-change-for-macosx/new-cape-2.png)
 
 2. 設定画面を開く
    - 新しく作られた `Unnamed` を右クリックしてEdit  
-![Edit 1]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/edit-1.png' | relative_url }})  
-![Edit 2]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/edit-2.png' | relative_url }})
+![Edit 1](/assets/images/macos/howto-mouse-cursor-change-for-macosx/edit-1.png)  
+![Edit 2](/assets/images/macos/howto-mouse-cursor-change-for-macosx/edit-2.png)
    - 選択して<kbd><kbd>&#8984; Cmd</kbd>+<kbd>E</kbd></kbd>で設定画面を表示します
 
 3. 表示されたらNameを変更しRetinaにチェックを入れます  
-![Rename 1]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/rename-1.png' | relative_url }})  
-![Rename 2]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/rename-2.png' | relative_url }})
+![Rename 1](/assets/images/macos/howto-mouse-cursor-change-for-macosx/rename-1.png)  
+![Rename 2](/assets/images/macos/howto-mouse-cursor-change-for-macosx/rename-2.png)
 
 4. 左下の+ボタンをクリックして `Unknown` を作り選択します  
-![Add Type]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/add-type.png' | relative_url }})
+![Add Type](/assets/images/macos/howto-mouse-cursor-change-for-macosx/add-type.png)
 
 5. Typeを `Arrow` に変更。あらかじめ用意しておいたカーソルアイコンをx1にドラッグしてください  
-![Change Type]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/change-type.png' | relative_url }})
+![Change Type](/assets/images/macos/howto-mouse-cursor-change-for-macosx/change-type.png)
 
 6. ウィンドウを閉じる時にSave  
-![Save]({{ '/images/macos/howto-mouse-cursor-change-for-macosx/save.png' | relative_url }})
+![Save](/assets/images/macos/howto-mouse-cursor-change-for-macosx/save.png)
 
 7. 自分が決めた名前のCapeを適用する
    - ダブルクリック、もしくは右クリックでApply

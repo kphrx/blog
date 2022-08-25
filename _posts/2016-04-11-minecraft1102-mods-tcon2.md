@@ -33,19 +33,20 @@ title: |
 
 #### 加工台
 前バージョンからあった、Crafting Station、Part Builder、Stencil Table、Tool Station、Tool Forge、Pattern Chestに加えてPart Chestが追加されています  
-このPart Chest、かなり多く入るみたいでラージチェスト一つ分を難なく収納してくれました。しかも破壊しても収納されたままです、すごい  
+このPart Chest、かなり多く入るみたいでラージチェスト一つ分を難なく収納してくれました。しかも破壊しても収納されたままです。すごい
+
 レシピはBlank Pattern１つ、バニラのチェスト１つ、木の棒２つ、木材１つです  
-![Recipe 1]({{ '/images/minecraft/minecraft1102-mods-tcon2/recipe-1.png' | relative_url }})
+![Recipe 1](/assets/images/minecraft/minecraft1102-mods-tcon2/recipe-1.png)
 
 また全てのテーブルとチェストを隣接させるとGUIに他のテーブルが表示されそこから使うことができるようになっていますので以前より視点移動もなく割と手間がないのではないかなと感じました  
 なお、Pattern Chestに直接隣接させないと画像のようにChestの内部が表示されないので注意。あとStencil Tableを隣接させた時にもChestが表示されるの地味に便利。バージョン１時代にはなかった機能です  
-![GUI 1]({{ '/images/minecraft/minecraft1102-mods-tcon2/gui-1.png' | relative_url }})
+![GUI 1](/assets/images/minecraft/minecraft1102-mods-tcon2/gui-1.png)
 
 だだしPattern ChestにCast(鋳型)を入れられなくなってましたので乾式精錬炉が完成すると通常のチェストの方を圧迫していくのではないかなと感じました。(他のバージョン(2.0〜2.3.3a)でもなるのかな？)  
 それからPatternはスタックできるようになったようですがPattern Chestには一種類一つしか入りませんので捨てない限りはインベントリを圧迫するゴミとなってしまいます。Part Chestはスタックしたままでも入りますがこちらも１スロットにしか入らないので一種類の上限は 64 になります。ここは気をつけないとダメかもしれません
 
 またTool Station/ForgeのGUIが変更されています  
-![GUI 2]({{ '/images/minecraft/minecraft1102-mods-tcon2/gui-2.png' | relative_url }})
+![GUI 2](/assets/images/minecraft/minecraft1102-mods-tcon2/gui-2.png)
 
 それからCrafting Stationにてツールの修理ができなくなっている模様です。これは地味に嫌な変更かもしれないです…探索してる最中に壊れたら修理するというのはもちろんなのですが、行った先で 3×3 のクラフトをするのにこれ一つで済んでいたものがTool Stationの分までインベントリを使うというのはなかなかいただけないです  
 もしこのバージョンのみで起きてることなら修正を待ちたいところですね
@@ -55,7 +56,7 @@ title: |
 さらにSmeltely Drainも以前は一方向だったのが上下四方全面から取り出すことができるようになっています。~~これは捗ります~~1.7.10の環境で何気なしに横向きのDrainに上から流し込んだら入りました…テクスチャが変わっただけか…まぁ分かりやすくなったからよしということで  
 それから乾式精錬炉の構成ブロックの焼成タンク/ガラス/ウィンドウのうちガラスがGaugeとなりガラスの方は単純に中身を見るための透過ブロックになっています  
 ガラスのレシピはこちら  
-![Recipe 2]({{ '/images/minecraft/minecraft1102-mods-tcon2/recipe-2.png' | relative_url }})
+![Recipe 2](/assets/images/minecraft/minecraft1102-mods-tcon2/recipe-2.png)
 
 あと焼成石、Seared Stoneをそのままクラフトし続けることで焼成レンガ(Seared Bricks)になります。以前はChisel(のみ)が必要だったのですが…なんでしょうか？
 

@@ -1,6 +1,6 @@
 ---
 date:       2018-10-11 14:47:09 +0900
-eye_catch:  /images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai.png
+eye_catch:  /assets/images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai.png
 category:   kancolle
 redirect_from:
   - /games/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai

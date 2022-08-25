@@ -24,7 +24,7 @@ title: |
 ## 使い方
 プラグインを導入したらコマンドのメニューの下部に改造可能な艦娘って項目が追加されてるのでクリックしてください  
 すると以下のようなウィンドウが表示されます  
-![window]({{ '/images/kancolle/overage-ship-list-plugin-for-logbook-kai/window.png' | relative_url }})
+![window](/assets/images/kancolle/overage-ship-list-plugin-for-logbook-kai/window.png)
 
 執筆時点でリリースしている1.0.0は自動更新されないので開き直す必要あります。次のバージョンで実装する予定  
 あとはコンバート改装を非表示にするオプションとか改造可能Lvになったら通知するような機能は実装したい（願望）
