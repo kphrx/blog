@@ -108,6 +108,7 @@ DEPENDENCIES
   jekyll (~> 4.2)
   jekyll-default-layout (~> 0.1)
   jekyll-feed (~> 0.16)
+  jekyll-github-metadata (~> 2.15)
   jekyll-octicons
   jekyll-paginate-v2 (~> 3.0)
   jekyll-redirect-from (~> 0.16)

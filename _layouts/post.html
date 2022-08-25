@@ -6,7 +6,7 @@ layout: default
     <header class="post-header">
         <p class="post-meta">
         <span class="post-publish-date">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</span>
-        <span class="post-edit-history"><a href="https://github.com/kPherox/blog/commits/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+        <span class="post-edit-history"><a href="{{ site.github.repository_url }}/commits/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">
             {% octicon history height:24 fill:currentColor %} History
           </a></span>
         </p>

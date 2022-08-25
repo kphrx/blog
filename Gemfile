@@ -8,7 +8,7 @@ group :jekyll_plugins do
   #gem "jekyll-remote-theme", "~> 0.4" # to use GitHub-hosted themes
 
   ## primer dependencies
-  # gem "jekyll-github-metadata", "~> 2.15" # GitHub metadata
+  gem "jekyll-github-metadata", "~> 2.15" # GitHub metadata
   gem "jekyll-seo-tag", "~> 2.8" # Site metadata
 
   ## Markdown converter for GitHub Flavored Markdown
