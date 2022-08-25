@@ -125,5 +125,5 @@ alert.runModal()
 既存のコードで楽曲情報を取得できなくなっていて少し手間取りましたが、Mojaveの仕様に沿うように修正するのに必要な部分は少しでした。 `procNotFound` で起動チェックが出来るので、後方互換を気にしなければ別の起動チェックを省けていいかもしれません
 
 ## 関連
-[NowPlayingを自動でツイートするMacアプリ](/macos/nowplaying-tweet-for-mac.html)
+[NowPlayingを自動でツイートするMacアプリ](2018-02-06-nowplaying-tweet-for-mac.md)
 

@@ -62,5 +62,5 @@ NowPlayingTweetはDockに表示されるアプリではなくステータスバ�
 ## 最後に
 正式版リリースを目指してしばらく開発を続けようかなと思います。アプリのアイコンどうしようかなぁ……
 
-[今後の予定]({{ '/blog/nowplayingtweet-new-release-and-milestone-0-6#mastodon対応-06' | relative_url }})に書いていますが次のバージョンではMastodonやPleroma、MisskeyといったActivityPubプロトコルを使って連合している分散型SNSへの投稿もできるようにしようとしています。~~設計に躓いて開発止まってますが……~~  
+[今後の予定](2019-04-01-nowplayingtweet-new-release-and-milestone-0-6.md#mastodon対応-06)に書いていますが次のバージョンではMastodonやPleroma、MisskeyといったActivityPubプロトコルを使って連合している分散型SNSへの投稿もできるようにしようとしています。~~設計に躓いて開発止まってますが……~~  
 バグ修正や小さな機能の追加等はパッチバージョンで続けて行くつもりなので挙動にバグがあるとかがあればGitHub Issueとかに書いてくれると嬉しいです
