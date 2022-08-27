@@ -10,7 +10,6 @@ NowPlayingTweetで利用しているScripting Bridgeが、Mojaveからユーザ�
 
 <!--more-->
 
-{% include toc.md %}
 
 ## 記事中で作るもの
 SwiftでiTunesの再生中の楽曲情報を取得するだけのものです  

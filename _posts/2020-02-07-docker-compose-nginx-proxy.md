@@ -12,7 +12,6 @@ nginxのdocker imageをSSL証明書を自動更新しながら使う。
 
 [サーバーを引っ越した話](https://blog.kpherox.dev/blog/change-vps-server.html)で最初に使ったイメージが悪かったので置き換えた
 
-{% include toc.md %}
 
 ## 最初のDocker image
 サーバー移転した時には[Neilpang/nginx-proxy][]をforkした[kPherox/autocert-nginx-proxy][]を使ってた。fork元では[jwilder/nginx-proxy][]のfork(Neilpang/nginx-proxy-base)でnginxバージョンをlatestにする変更があったのだけれどimageを定期的に作り直してなく、むしろメンテされてるfork元の方が新しいnginxを利用するようになっていたので[jwilder/nginx-proxy][]を直接使うような変更を加えていた

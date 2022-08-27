@@ -11,7 +11,6 @@ title: |
 
 <!--more-->
 
-{% include toc.md %}
 
 ## 経緯
 今から4ヶ月ほど前、Twitterでアカウントロックが頻発していました  

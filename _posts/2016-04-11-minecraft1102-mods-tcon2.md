@@ -15,7 +15,6 @@ title: |
 
 他の人がまとめたりしてますがいまいちよくわからないのでv１時代のことが書かれてある[日本語Wiki](https://www26.atwiki.jp/minecraft/pages/1125.html)を参考に自分もまとめちゃおうって思いつきなので完全に自分のためです。見づらければ申し訳ないです
 
-{% include toc.md %}
 
 ## ダウンロード先
 - Tenkers’ Construct: <https://minecraft.curseforge.com/projects/tinkers-construct/files>

@@ -10,7 +10,6 @@ Mac OS X でマウスのカーソル(ポインター)を変更できるアプリ
 
 <!--more-->
 
-{% include toc.md %}
 
 ## インストール方法
 こちらのリンクから最新版の `Mousecape.zip` をダウンロードします(執筆時はPre-release版ですが0.0.5。Release版が出ればそちらを優先します)。リンク先でも"THIS IS NOT MOUSECAPE"と書いてある通りcursor flipは関係ありません  
