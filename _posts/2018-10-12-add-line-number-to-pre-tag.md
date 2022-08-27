@@ -12,7 +12,6 @@ preに行番号つけたかった。Demoの `pre` に適用しています
 
 この方法でいくつも書くとするとCGIやJSに頼る必要があると思います
 
-{% include toc.md %}
 
 ## Demo
 <style>

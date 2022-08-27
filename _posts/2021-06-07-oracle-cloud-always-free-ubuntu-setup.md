@@ -12,7 +12,6 @@ Oracle Cloud の Always Free で APT と Docker + nftables の設定をする
 
 Oracle Cloud の Canonical Ubuntu 20.04 (Minimal) は何も設定しないと、せっかくの minimized で `apt install` の時に Recommends にされてるパッケージまでまとめて入れてしまうので自動更新とかも合わせてちゃんと設定する
 
-{% include toc.md %}
 
 ## `APT::Install-*` と Docker と nftables をまとめて設定
 GitHub Gist でスクリプトを公開してあるので `curl | bash` してしまう  
