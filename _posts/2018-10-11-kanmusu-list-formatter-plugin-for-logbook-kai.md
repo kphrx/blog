@@ -4,10 +4,9 @@ eye_catch:  /assets/images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-
 category:   kancolle
 redirect_from:
   - /games/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai
-
-title: |
-  航海日誌（logbook-kai）で艦隊晒しページのフォーマットを生成するプラグイン
 ---
+
+# 航海日誌（logbook-kai）で艦隊晒しページのフォーマットを生成するプラグイン
 
 艦これのツールのプラグインの記事
 

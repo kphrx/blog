@@ -1,10 +1,9 @@
 ---
 date:       2020-02-07 21:21:13 +0900
 category:   blog
-
-title: |
-  docker-composeを使ってnginxのリバースプロキシを設置する
 ---
+
+# docker-composeを使ってnginxのリバースプロキシを設置する
 
 nginxのdocker imageをSSL証明書を自動更新しながら使う。
 

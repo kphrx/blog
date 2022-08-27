@@ -1,10 +1,9 @@
 ---
 date:       2019-04-01 21:25:20 +0900
 category:   blog
-
-title: |
-  NowPlayingTweet の新規リリースと 0.6 について
 ---
+
+# NowPlayingTweet の新規リリースと 0.6 について
 
 Issueが開かれて久々にソースコードを触ってたついでにユーザー数がそこそこいるというのを確認したので、自分が使うためのMastodon対応の意志を書いておく
 

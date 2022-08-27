@@ -1,10 +1,9 @@
 ---
 date:       2016-10-21 00:00:10 +0900
 category:   macos
-
-title: |
-  Mousecape – Mac OS X でマウスカーソルを変更する方法
 ---
+
+# Mousecape – Mac OS X でマウスカーソルを変更する方法
 
 Mac OS X でマウスのカーソル(ポインター)を変更できるアプリの紹介
 

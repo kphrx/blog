@@ -1,10 +1,9 @@
 ---
 date:       2020-02-17 20:13:06 +0900
 category:   blog
-
-title: |
-  macOSでflacをalacに変換するワンライナー
 ---
+
+# macOSでflacをalacに変換するワンライナー
 
 最近moraでミリマス楽曲のロスレスとか買うようになったので
 

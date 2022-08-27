@@ -2,10 +2,9 @@
 date:       2018-10-11 15:14:38 +0900
 eye_catch:  /assets/images/eye-catch/blog/twitter-account-locked.png
 category:   blog
-
-title: |
-  年齢制限でTwitterのアカウントロックされた話
 ---
+
+# 年齢制限でTwitterのアカウントロックされた話
 
 普段使っていたTwitterアカウントをロックされてしまいました。それの報告
 

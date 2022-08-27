@@ -1,10 +1,9 @@
 ---
 date:       2017-04-10 00:00:14 +0900
 category:   blog
-
-title: |
-  Windows10とParallels12買った話
 ---
+
+# Windows10とParallels12買った話
 
 今回はWindows 10 Professional リテール版とParallels Desktop 12 for Macを買った話です。若干人柱的な報告も
 

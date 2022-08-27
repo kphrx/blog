@@ -1,10 +1,9 @@
 ---
 date:       2018-11-07 19:15:36 +0900
 category:   coding
-
-title: |
-  macOS MojaveでSwift 4.2 + Scripting Bridge
 ---
+
+# macOS MojaveでSwift 4.2 + Scripting Bridge
 
 NowPlayingTweetで利用しているScripting Bridgeが、Mojaveからユーザーに許可をもらわないと利用できないようにセキュリティが強化されているのでその許可を求める方法とか
 
