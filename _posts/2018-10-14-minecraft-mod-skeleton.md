@@ -3,10 +3,9 @@ date:       2018-10-14 22:56:01 +0900
 category:   minecraft
 redirect_from:
   - /games/minecraft/minecraft-mod-skeleton
-
-title: |
-  MinecraftのMod導入環境のスケルトンみたいなものを作った
 ---
+
+# MinecraftのMod導入環境のスケルトンみたいなものを作った
 
 ここから大きいmod導入していく感じ
 

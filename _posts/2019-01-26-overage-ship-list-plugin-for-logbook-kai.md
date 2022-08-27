@@ -3,10 +3,9 @@ date:       2019-01-26 06:04:26 +0900
 category:   kancolle
 redirect_from:
   - /games/kancolle/overage-ship-list-plugin-for-logbook-kai
-
-title: |
-  航海日誌（logbook-kai）で改造可能な艦娘のリストを表示するプラグイン
 ---
+
+# 航海日誌（logbook-kai）で改造可能な艦娘のリストを表示するプラグイン
 
 本当は19冬イベ期間中に作ってE2Qやりながら見たかったやつ  
 本体の経験値計算機の改装レベル不足の艦娘とお風呂に入りたい艦娘のTableViewを参考にしてサクッと作成

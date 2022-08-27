@@ -4,10 +4,9 @@ eye_catch:  https://i.imgur.com/9LZ8GX9.png
 category:   minecraft
 redirect_from:
   - /games/minecraft/minecraft1102-mods-tcon2
-
-title: |
-  Minecraft[1.10.2][Mods] Tinkers Construct 2紹介
 ---
+
+# Minecraft\[1.10.2]\[Mods] Tinkers Construct 2紹介
 
 マインクラフト1.10.2のforgeでいくつかModを入れて遊ぼうと考えた時にツール系のModとして愛用していたTinkers Construct(TCon)がv2になり少し(?)変わったそうなのでまとめました
 
