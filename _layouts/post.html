@@ -3,21 +3,24 @@ layout: default
 ---
 
 <main class="post">
-    <header class="post-header">
-        <p class="post-meta">
-        <span class="post-publish-date">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</span>
-        <span class="post-edit-history"><a href="{{ site.github.repository_url }}/commits/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">
-            {% octicon history height:24 fill:currentColor %} History
-          </a></span>
-        </p>
-        <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.eye_catch %}
-        <figure class="eye-catch">
-            <img alt="eye catch" src="{{ page.eye_catch }}">
-        </figure>
-        {% endif %}
-    </header>
+  <header class="post-header">
+    <p class="post-meta">
+    <span class="post-publish-date">
+      {{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}
+    </span>
+    <span class="post-edit-history">
+      <a href="{{ site.github.repository_url }}/commits/master/{{ page.path }}" target="_blank" rel="noopener noreferrer">
+        {% octicon history height:24 fill:currentColor %} History
+      </a>
+    </span>
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.eye_catch %}
+    <figure class="eye-catch">
+      <img alt="eye catch" src="{{ page.eye_catch }}">
+    </figure>
+    {% endif %}
+  </header>
 
-    {{ content }}
+  {{ content }}
 </main>
-

@@ -3,21 +3,11 @@ h1, h2 {
   border-color: var(--border-color);
 }
 
-.site-title {
-  font-weight: 600;
-  font-size: 2em;
-  margin-bottom: 1rem;
-  padding-bottom: 0.3em;
-  display: block;
-  color: var(--heading-color);
-  border-bottom: 1px solid var(--border-color);
-
-  & > a {
-    color: inherit;
-  }
+.site-title > a {
+  color: inherit;
 }
 
-h1.page-title {
+.page-title {
   text-transform: uppercase;
   font-size: 1.8em;
 }
