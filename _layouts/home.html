@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<main class="posts">
+  <header>
+    <section class="notes">
+      {{ content | markdownify }}
+    </section>
+
+    <section class="position">
+      Page: {{ paginator.page }} of {{ paginator.total_pages }}
+    </section>
+
+    {% include pagination.html %}
+  </header>
+
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+  <a class="post-wrap" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+    <article class="post">
+      <header class="post-header">
+        {% if post.eye_catch %}
+        <figure class="eye-catch">
+          <img alt="eye catch" src="{{ post.eye_catch | relative_url }}">
+        </figure>
+        {% endif %}
+        <p class="post-meta">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</p>
+        <h1 class="post-title">{{ post.title }}</h1>
+      </header>
+      {{ post.excerpt }}
+    </article>
+  </a>
+  {% endfor %}
+
+  <footer>
+    {% include pagination.html %}
+  </footer>
+</main>

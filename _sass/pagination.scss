@@ -1,0 +1,38 @@
+nav.pagination {
+  margin: 1em;
+
+  span {
+    &.first, &.previous, &.next, &.last {
+      color: var(--text-sub-color);
+    }
+  }
+}
+
+.post-wrap {
+  color: var(--text-color);
+
+  .post-header {
+    & > .post-title {
+      margin-bottom: 0;
+      border: none;
+    }
+
+    & > .eye-catch {
+      float: right;
+      width: 32%;
+      max-width: 320px;
+
+      & > img {
+        object-fit: cover;
+        float: right;
+        height: 96px;
+        max-height: 96px;
+      }
+    }
+  }
+
+  &:not(:last-of-type) > .post {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1em;
+  }
+}
