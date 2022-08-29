@@ -23,10 +23,16 @@ body {
     color: var(--text-sub-color);
   }
 
+  .post, .page {
+    background: var(--fg-color);
+    margin: 1em auto;
+    padding: 1em;
+  }
+
   .post-header {
-    & > .post-meta {
+    > .post-meta {
       margin-bottom: 0;
-      & > .post-edit-history > a {
+      > .post-edit-history > a {
         color: var(--text-color);
         font-weight: 500;
         > svg {
@@ -36,16 +42,11 @@ body {
       }
     }
 
-    & > .post-title {
-      margin-top: 0;
-      font-size: 1.8em;
-    }
-
-    & > .eye-catch {
+    > .eye-catch {
       margin: 0;
       width: 100%;
 
-      & > img {
+      > img {
         object-fit: contain;
         height: auto;
         max-height: 50vh;
