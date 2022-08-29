@@ -7,7 +7,8 @@ module RougeFormatFix
     return nil unless lang || opts[:default_lang] || opts[:guess_lang]
 
     lexer = Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
-    return nil if opts[:disable] || !lexer || (lexer.tag == "plaintext" && !opts[:guess_lang])
+    return call(converter, text, nil, type, call_opts) unless lexer
+    return nil if opts[:disable] || (lexer.tag == "plaintext" && !opts[:guess_lang])
 
     opts[:css_class] ||= 'highlight' # For backward compatibility when using Rouge 2.0
     formatter = formatter_class(opts)
