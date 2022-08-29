@@ -91,37 +91,45 @@ div.highlight pre {
 }
 
 pre.highlight {
-  padding: 0 !important;
-  overflow: visible !important;
+  counter-reset: line-number;
+  padding: 0;
+  position: relative;
 
-  table.rouge-table {
-    tr {
-      padding: 0;
-      border: none;
-      background-color: transparent;
-    }
+  &::before {
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 5ex;
+  }
 
-    td {
-      padding: 0;
-      border: none;
+  > code {
+    position: relative;
 
-      &.rouge-gutter.gl {
-        position: absolute;
+    > span.line {
+      counter-increment: line-number;
 
-        pre.lineno {
-          background-color: var(--base2) !important;
-          color: var(--base1) !important;
-          text-align: right;
-          padding: .3em 1ex .3em;
-          width: 5ex;
-        }
+      &::before {
+        content: counter(line-number);
+        background-color: var(--base2);
+        color: var(--base1);
+        text-align: right;
+        padding-right: 1ex;
+        margin-right: 1ex;
+        position: sticky;
+        inset: 0;
+        z-index: 1;
+        width: 5ex;
+        display: inline-block;
+        box-sizing: border-box;
       }
 
-      &.rouge-code {
-        padding-left: 5ex;
-        pre {
-          padding: .3em 1ex .3em;
-        }
+      &:first-child::before {
+        padding-top: .3em;
+      }
+
+      &:last-child::before {
+        padding-bottom: .3em;
       }
     }
   }
