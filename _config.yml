@@ -53,8 +53,8 @@ kramdown:
   syntax_highlighter_opts:
     css_class: highlight
     block:
-      formatter: HTMLPygments
-      base_formatter: HTMLLinewise
+      formatter: HTMLLinewise
+      wrap: true
       tag_name: span
       class: line
       start_line: 1
