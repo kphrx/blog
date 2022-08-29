@@ -16,7 +16,7 @@ def insert_toc(content, level, text)
   prefix = "#" * level
   header_reg = Regexp.new(prefix + " *?" + Regexp.escape(text))
 
-  content.gsub(header_reg, "{% include toc.md %}\n\n" + prefix + " " + text)
+  content.sub(header_reg, "{% include toc.md %}\n\n" + prefix + " " + text)
 end
 
 Jekyll::Hooks.register [:pages, :documents], :pre_render do |page|
