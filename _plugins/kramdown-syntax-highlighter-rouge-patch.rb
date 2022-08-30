@@ -8,7 +8,7 @@ module KramdownSyntaxHighlighterFix
 
     lexer = Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
     return nil if !lexer && !lang
-    return call(converter, text, nil, type, call_opts) unless lexer
+    return call(converter, text, fallback_with_parameters(lang, opts[:default_lang]), type, call_opts) unless lexer
     return nil if opts[:disable] || (lexer.tag == "plaintext" && !opts[:guess_lang])
 
     call_opts[:options] = lexer.options
@@ -20,6 +20,14 @@ module KramdownSyntaxHighlighterFix
       formatter = Rouge::Formatters::HTMLPygments.new(formatter, opts.fetch(:css_class, 'codehilite'))
     end
     formatter.format(lexer.lex(text))
+  end
+
+  def fallback_with_parameters(str, default_lang)
+    return nil unless default_lang
+    return default_lang unless str.include?('?')
+    _, params = str.split('?', 2)
+
+    "#{default_lang}?#{params}"
   end
 
   # 既知の Rouge:Formatters の initialize 引数の形式で出し分ける
