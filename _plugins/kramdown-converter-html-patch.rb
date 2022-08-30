@@ -8,6 +8,7 @@ module AddDataAttributesToHighlighter
 
     if highlighted_code
       add_syntax_highlighter_to_class_attr(attr, hl_opts[:lang])
+      add_syntax_highlighter_options_to_data_attr(attr, hl_opts[:options])
       "#{' ' * indent}<div#{html_attributes(attr)}>#{highlighted_code}#{' ' * indent}</div>\n"
     else
       super(el, indent)
@@ -26,6 +27,11 @@ module AddDataAttributesToHighlighter
     end
 
     format_as_span_html('code', attr, result)
+  end
+
+  def add_syntax_highlighter_options_to_data_attr(attr, opts)
+    opts = opts.transform_keys { |k| "data-#{k}" }
+    attr.merge!(opts)
   end
 end
 

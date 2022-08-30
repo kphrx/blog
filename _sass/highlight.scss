@@ -334,6 +334,30 @@ div.highlighter-rouge {
   --padding-y: 0.3em;
   --padding-x: 1ex;
 
+  &[data-filename] {
+    background-color: var(--base03);
+    padding: 0;
+
+    border-radius: 3px;
+
+    position: relative;
+
+    &::before {
+      content: attr(data-filename);
+      display: block;
+      width: fit-content;
+      background-color: var(--base01);
+      color: var(--base3);
+      position: relative;
+      z-index: 1;
+
+      font-size: 85%;
+
+      padding: 0 .5ex;
+      margin: 0 0 0 var(--padding-x);
+    }
+  }
+
   > div.highlight {
     background-color: transparent;
 
@@ -354,6 +378,29 @@ div.highlighter-rouge {
   }
   &:not(.language-console) {
     --lineno-width: 5ex;
+
+    &[data-filename] {
+      &::after {
+        content: '';
+
+        position: absolute;
+        inset: 0;
+
+        display: inline-block;
+        font-size: 85%;
+        width: var(--lineno-width);
+
+        border-radius: inherit;
+
+        background-color: var(--base02);
+      }
+
+      > div.highlight > pre.highlight {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
     > div.highlight > pre.highlight {
       counter-reset: line-number;
 

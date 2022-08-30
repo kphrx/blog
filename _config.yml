@@ -60,7 +60,6 @@ kramdown:
       wrap: true
       tag_name: span
       class: line
-      start_line: 1
 
   footnote_backlink: '&#8617;&#65038;'
   # footnote_backlink: '&#x21A9;&#xFE0E;'
