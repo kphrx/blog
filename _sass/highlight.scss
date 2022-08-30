@@ -340,7 +340,7 @@ div.highlighter-rouge {
     > pre.highlight {
       padding: var(--padding-y) var(--padding-x);
 
-      overflow: auto;
+      overflow-x: auto;
 
       > code {
         padding: 0;
@@ -356,7 +356,7 @@ div.highlighter-rouge {
     counter-reset: line-number;
 
     padding: 0;
-    overscroll-behavior: none;
+    overscroll-behavior-x: none;
 
     > code > span.line {
       counter-increment: line-number;
