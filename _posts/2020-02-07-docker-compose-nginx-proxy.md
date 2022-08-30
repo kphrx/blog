@@ -28,7 +28,7 @@ docker-composeは`docker --volumes-from`と同様のプロパティをv3にな�
 ## docker-compose v3で廃止された`volumes_from`に相当する設定
 とにかくvolumes_fromと同じことをしなくてはいけない。Docker公式のドキュメントにはnamed volumesを設定するといいとある[^2]ので適当にvolumesを設定してみることにした
 
-```
+```yaml
 version: '3.5'
 services:
 
@@ -94,7 +94,7 @@ volumes:
 
 なので最終的に以下のdocker-compose.ymlで動くようになった
 
-```
+```yaml
 version: '3.5'
 services:
 

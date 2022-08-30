@@ -28,19 +28,10 @@ ConoHa VPSの1GBプランを契約していました。現在さくらのVPSの5
 
 OSと `cat /proc/cpuinfo` の結果を載せておきます
 
-- ConoHa VPS 1GBプラン
-   <dl>
-     <dt>OS</dt>
-     <dd>Ubuntu 16.04 -> do-release-upgradeでUbuntu 18.04に更新</dd>
-   </dl>
-   <dl>
-     <dt markdown="1">
-
-     `cat /proc/cpuinfo`
-     </dt>
-     <dd markdown="1">
-
-   ```
+- *ConoHa VPS 1GBプラン*
+  Ubuntu 16.04 -> do-release-upgradeでUbuntu 18.04に更新
+   ```terminal
+   $ cat /proc/cpuinfo
    processor	: 0
    vendor_id	: GenuineIntel
    cpu family	: 6
@@ -95,22 +86,11 @@ OSと `cat /proc/cpuinfo` の結果を載せておきます
    address sizes	: 46 bits physical, 48 bits virtual
    power management:
    ```
-     </dd>
-   </dl>
 
-- さくらのVPS 512MBプラン
-   <dl>
-     <dt>OS</dt>
-     <dd>Debian 10</dd>
-   </dl>
-   <dl>
-     <dt markdown="1">
-
-     `cat /proc/cpuinfo`
-     </dt>
-     <dd markdown="1">
-
-   ```
+- *さくらのVPS 512MBプラン*
+  Debian 10
+   ```terminal
+   $ cat /proc/cpuinfo
    processor	: 0
    vendor_id	: GenuineIntel
    cpu family	: 6
@@ -138,8 +118,6 @@ OSと `cat /proc/cpuinfo` の結果を載せておきます
    address sizes	: 46 bits physical, 48 bits virtual
    power management:
    ```
-     </dd>
-   </dl>
 
 ## サーバー引っ越しに伴うドメインの変更等
 サーバーを引っ越ししたことでドメインの変更を進めたりしたのでそれを記録
