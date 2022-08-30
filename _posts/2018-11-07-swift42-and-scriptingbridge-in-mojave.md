@@ -27,11 +27,11 @@ Scripting BridgeでiTunesへアクセスするためにどの権限を利用す�
 
 権限は次のコマンドでxmlを出力して利用する `command` や `property` の `access-group` の `identifier` を参照してください
 ```terminal
-$ sdef /Applications/iTunes.app > itunes.sdef.xm
+$ sdef /Applications/iTunes.app > itunes.sdef.xml
 ```
 
 今回利用するのは `current track` なので以下の部分を参照します
-```xml
+```xml?filename=itunes.sdef.xml
 <property name="current track" code="pTrk" type="track" access="r" description="the current targeted track">
     <access-group identifier="com.apple.iTunes.playback" access="r"/>
 </property>
@@ -45,17 +45,21 @@ Mojaveから必要になったものです。後方互換性を維持するの�
 
 戻り値は4種類ありますが権限を要求するのであれば知っておく必要があるのは以下の3つです
 
-- `procNotFound = -600` はアクセス権を確認及び要求しようとしているアプリ（ここではiTunes）が起動していないことを表す値です  
-<https://developer.apple.com/documentation/coreservices/procnotfound>
-- `errAEEventNotPermitted = -1743` はアクセス権を要求したことがあるアプリで現在拒否されていることを表す値です  
-<https://developer.apple.com/documentation/coreservices/erraeeventnotpermitted>
-- `noErr = 0` はアクセス権を保有していることを表します  
-<https://developer.apple.com/documentation/kernel/1645412-anonymous/noerr>
+- [procNotFound | Apple Developer Documentation](https://developer.apple.com/documentation/coreservices/procnotfound)  
+  `procNotFound = -600` はアクセス権を確認及び要求しようとしているアプリ（ここではiTunes）が起動していないことを表す値です。
+- [errAEEventNotPermitted | Apple Developer Documentation](https://developer.apple.com/documentation/coreservices/erraeeventnotpermitted)  
+  `errAEEventNotPermitted = -1743` はアクセス権を要求したことがあるアプリで現在拒否されていることを表す値です  
+- [noErr | Apple Developer Documentation](https://developer.apple.com/documentation/kernel/1645412-anonymous/noerr)  
+  `noErr = 0` はアクセス権を保有していることを表します  
 
 グローバルな定数ですが `noErr` のみ `OSStatus` 型で他は数値型なので以下のサンプルのように条件分岐させるときは `OSStatus(procNotFound)` とする必要があります
-一つ注意が必要で、要求するアプリが起動していない時にはAutomationの権限を要求するアラートは出ません。ただ `procNotFound` が返ってくるだけなのでそれを考慮してください
 
-```swift
+一つ注意が必要で、要求するアプリが起動していない時にはAutomationの権限を要求するアラートは出ず、 `procNotFound` が返ってくるだけなのでそれを考慮してください
+
+```swift?filename=AppDelegate.swift
+import Foundation
+import AppKit
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -98,24 +102,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 ## 楽曲情報を取得する
 許可を求めることが出来ればあとは今までと変わりません。今回はPlayerBridgeを利用しているので `iTunesBridge` をimportして再生中の楽曲情報を `iTunesApplication` クラスから取得します
-```swift
-import ScriptingBridge
-
-// PlayerBridgeのiTunes用のフレームワーク
-import iTunesBridge
-
-/* ... */
-
-guard let itunes: iTunesApplication = SBApplication(bundleIdentifier: "com.apple.iTunes") as? iTunesApplication, let currentTrack: iTunesTrack = itunes.currentTrack else {
-    let alert = NSAlert(message: "再生中の楽曲はありません",
-                                style: .informational)
-    alert.runModal()
-    return
-}
-
-let alert = NSAlert(message: currentTrack.title!,
-                    style: .informational)
-alert.runModal()
+```diff
+--- a/AppDelegate.swift
++++ b/AppDelegate.swift
+@@ -1,6 +1,9 @@
+ import Foundation
+ import AppKit
+ 
++import ScriptingBridge
++import iTunesBridge // PlayerBridgeのiTunes用のフレームワーク
++
+ @NSApplicationMain
+ class AppDelegate: NSObject, NSApplicationDelegate {
+ 
+@@ -36,6 +39,19 @@
+             NSApplication.shared().terminate(self)
+             return
+         }
++
++        guard let itunes: iTunesApplication = SBApplication(bundleIdentifier: "com.apple.iTunes") as? iTunesApplication,
++              let currentTrack: iTunesTrack = itunes.currentTrack else {
++            let alert = NSAlert(message: "再生中の楽曲はありません",
++                                style: .informational)
++
++            alert.runModal()
++            return
++        }
++
++        let alert = NSAlert(message: currentTrack.title!,
++                            style: .informational)
++        alert.runModal()
+     }
+ 
+ }
 ```
 
 ## 締め

@@ -27,22 +27,23 @@ Nginx 1.15.9から `ssl_certificate` で変数を利用することが可能に�
 
 ちなみにこんな感じ
 
-```nginx
+```nginx?filename=/etc/nginx/conf.d/variable-ssl-cert.conf
+ssl_certificate     /etc/nginx/certlinks/$host/fullchain.pem;
+ssl_certificate_key /etc/nginx/certlinks/$host/privkey.pem;
+
 server {
     listen          433 ssl http2;
     server_name     example.com www.example.com;
 
     include         ssl_certificate.conf;
 
+    ssl_trusted_certificate /etc/nginx/certlinks/example.com/chain.pem;
+
     # ...
 }
 ```
-```nginx
-ssl_certificate     /etc/nginx/certlinks/$host/fullchain.pem;
-ssl_certificate_key /etc/nginx/certlinks/$host/privkey.pem;
-```
 
-`ssl_trusted_certificate` には ***変数が使えない*** 。しかし同じ認証局なら同一のものなので複数の認証局を使っているのでなければ同一のものを指定できる
+`ssl_trusted_certificate` には ***変数が使えない*** 。しかし同じ認証局なら同一のものなので複数の認証局を使っているのでなければ記述を共通化できる
 
 
 ## 弊害

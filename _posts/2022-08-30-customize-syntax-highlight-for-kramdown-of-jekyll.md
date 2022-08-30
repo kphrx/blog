@@ -20,35 +20,32 @@ GitHub Pages が Actions からデプロイできるようになって `ruby/set
 
 ### 最初の設定
 
-- *_config.yml*
-  ```yaml
-  markdown: kramdown
-  highlighter: rouge
-  
-  kramdown:
-    input: GFM
-    syntax_highlighter: rouge
-  
-    syntax_highlighter_opts:
-      css_class: highlight
-      block:
-        wrap: true
-        formatter: HTMLLinewise
-        tag_name: span
-        class: line
-  ```
+```yaml?filename=_config.yml
+markdown: kramdown
+highlighter: rouge
 
-- *index.md*
-  ````md
-  ---
-  layout: default
-  ---
-  
-  ```
-  sample
-  code block
-  ```
-  ````
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  syntax_highlighter_opts:
+    css_class: highlight
+    block:
+      formatter: HTMLLinewise
+      tag_name: span
+      class: line
+```
+
+````md?filename=index.md
+---
+layout: default
+---
+
+```
+sample
+code block
+```
+````
 
 行番号が必要なのは block だけなので `:kramdown, :syntax_highlighter_opts, :block` の `:formatter` に HTMLLinewise を指定して `:tag_name` と `:class` を設定する。
 
@@ -79,61 +76,60 @@ Did you mean?  store
 
 `Kramdown::Converter::SyntaxHighlighter::Rouge.call/5`([rouge.rb#L24-L35](https://github.com/gettalong/kramdown/blob/REL_2_4_0/lib/kramdown/converter/syntax_highlighter/rouge.rb#L24-L35)) で `formatter_class(opts).new(opts)` している部分を変更して `.singleton_class.prepend/1` する。
 
-- *_plugins/kramdown-syntax-highlight-patch.rb*
-  ```ruby
-  require 'kramdown/converter/syntax_highlighter/rouge'
-  
-  module KramdownSyntaxHighlighterFix
-    def call(converter, text, lang, type, call_opts)
+```ruby?filename=_plugins/kramdown-syntax-highlight-patch.rb
+require 'kramdown/converter/syntax_highlighter/rouge'
+
+module KramdownSyntaxHighlighterFix
+  def call(converter, text, lang, type, call_opts)
     opts = options(converter, type)
     call_opts[:default_lang] = opts[:default_lang]
     return nil unless lang || opts[:default_lang] || opts[:guess_lang]
-  
-      lexer = ::Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
-      return nil if opts[:disable] || !lexer || (lexer.tag == "plaintext" && !opts[:guess_lang])
-  
-      opts[:css_class] ||= 'highlight'
-      formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
-      formatter.format(lexer.lex(text))
-    end
-  
-    # 既知の Rouge:Formatters の initialize 引数の形式で出し分ける
-    def new_formatter(formatter, opts)
-      case
-      when "Rouge::Formatters::HTMLInline" === formatter.to_s
-        formatter.new(opts.fetch([:inline_theme], 'github'))
-  
-      when ["Rouge::Formatters::Terminal256",
-            "Rouge::Formatters::TerminalTruecolor"].include?(formatter.to_s)
-        opts[:theme] ? formatter.new(opts[:theme]) : formatter.new()
-  
-      when "Rouge::Formatters::HTMLPygments" === formatter.to_s
-        formatter.new(base_formatter(opts), opts.fetch(:css_class, 'codehilite'))
-  
-      when ["Rouge::Formatters::HTMLTable",
-            "Rouge::Formatters::HTMLLinewise",
-            "Rouge::Formatters::HTMLLineTable",
-            "Rouge::Formatters::HTMLLineHighlighter"].include?(formatter.to_s)
-        formatter.new(base_formatter(opts), opts)
-  
-      else
-        # Rouge::Formatter
-        # Rouge::Formatters::HTML
-        # Rouge::Formatters::HTMLLegacy
-        # Rouge::Formatters::Tex
-        # Rouge::Formatters::Null
-        formatter.new(opts)
-      end
-    end
-  
-    def base_formatter(opts)
-      opts[:inline_theme] ? Rouge::Formatters::HTMLInline.new(opts[:inline_theme])
-                          : Rouge::Formatters::HTML.new
+
+    lexer = ::Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
+    return nil if opts[:disable] || !lexer || (lexer.tag == "plaintext" && !opts[:guess_lang])
+
+    opts[:css_class] ||= 'highlight'
+    formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
+    formatter.format(lexer.lex(text))
+  end
+
+  # 既知の Rouge:Formatters の initialize 引数の形式で出し分ける
+  def new_formatter(formatter, opts)
+    case
+    when "Rouge::Formatters::HTMLInline" === formatter.to_s
+      formatter.new(opts.fetch([:inline_theme], 'github'))
+
+    when ["Rouge::Formatters::Terminal256",
+          "Rouge::Formatters::TerminalTruecolor"].include?(formatter.to_s)
+      opts[:theme] ? formatter.new(opts[:theme]) : formatter.new()
+
+    when "Rouge::Formatters::HTMLPygments" === formatter.to_s
+      formatter.new(base_formatter(opts), opts.fetch(:css_class, 'codehilite'))
+
+    when ["Rouge::Formatters::HTMLTable",
+          "Rouge::Formatters::HTMLLinewise",
+          "Rouge::Formatters::HTMLLineTable",
+          "Rouge::Formatters::HTMLLineHighlighter"].include?(formatter.to_s)
+      formatter.new(base_formatter(opts), opts)
+
+    else
+      # Rouge::Formatter
+      # Rouge::Formatters::HTML
+      # Rouge::Formatters::HTMLLegacy
+      # Rouge::Formatters::Tex
+      # Rouge::Formatters::Null
+      formatter.new(opts)
     end
   end
-  
-  Kramdown::Converter::SyntaxHighlighter::Rouge.singleton_class.prepend(KramdownSyntaxHighlighterFix)
-  ```
+
+  def base_formatter(opts)
+    opts[:inline_theme] ? Rouge::Formatters::HTMLInline.new(opts[:inline_theme])
+                        : Rouge::Formatters::HTML.new
+  end
+end
+
+Kramdown::Converter::SyntaxHighlighter::Rouge.singleton_class.prepend(KramdownSyntaxHighlighterFix)
+```
 
 これで各行が `<span class=line>` `\n</span>` で囲われてマークアップされた index.html が生成される
 
@@ -149,83 +145,67 @@ Configuration file: ./sample-jekyll/_config.yml
  Auto-regeneration: disabled. Use --watch to enable.
 ```
 
-- *_site/index.html*
-  ```html
-  <div class="language-plaintext highlighter-rouge"><span class="line">sample
-  </span><span class="line">code block
-  </span></div>
-  ```
+```html?filename=_site/index.html
+<div class="language-plaintext highlighter-rouge"><span class="line">sample
+</span><span class="line">code block
+</span></div>
+```
 
 
 ### `Rouge::Formatters::HTMLPygments` で包む
 
 `<pre><code>` で囲うために HTMLPygments を使う。 `Rouge::Formatters::HTMLLegacy` が `:wrap` を設定すると HTMLPygments を一番最後に使うので同じようにする。
 
-- *_config.yml*
-  ```diff
-   kramdown:
-     input: GFM
-     syntax_highlighter: rouge
-   
-     syntax_highlighter_opts:
-       css_class: highlight
-       block:
-  +      wrap: true
-         formatter: HTMLLinewise
-         tag_name: span
-         class: line
-  ```
+```diff
+--- a/_config.yml
++++ b/_config.yml
+@@ -11,3 +11,4 @@
+       formatter: HTMLLinewise
+       tag_name: span
+       class: line
++      wrap: true
+```
 
-- *_plugins/kramdown-syntax-highlight-patch.rb*
-  ```diff
-     def call(converter, text, lang, type, call_opts)
-       opts = options(converter, type)
-       call_opts[:default_lang] = opts[:default_lang]
-       return nil unless lang || opts[:default_lang] || opts[:guess_lang]
-   
-       lexer = ::Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
-       return nil if opts[:disable] || !lexer || (lexer.tag == "plaintext" && !opts[:guess_lang])
-   
-       opts[:css_class] ||= 'highlight'
-       formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
-  +    if opts[:wrap] && !formatter.is_a?(Rouge::Formatters::HTMLPygments)
-  +      formatter = Rouge::Formatters::HTMLPygments.new(formatter, opts.fetch(:css_class, 'codehilite'))
-  +    end
-       formatter.format(lexer.lex(text))
-     end
-  ```
+```diff
+--- a/_plugins/kramdown-syntax-highlighter-rouge-patch.rb
++++ b/_plugins/kramdown-syntax-highlighter-rouge-patch.rb
+@@ -11,6 +11,9 @@
+ 
+     opts[:css_class] ||= 'highlight'
+     formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
++    if opts[:wrap] && !formatter.is_a?(Rouge::Formatters::HTMLPygments)
++      formatter = Rouge::Formatters::HTMLPygments.new(formatter, opts.fetch(:css_class, 'codehilite'))
++    end
+     formatter.format(lexer.lex(text))
+   end
+ 
+```
 
 `div.highlight pre.highlight code` で囲われた結果が入る
 
-- *_site/index.html*
-  ```html
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="line">sample
-  </span><span class="line">code block
-  </span></code></pre></div></div>
-  ```
+```html?filename=_site/index.html
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="line">sample
+</span><span class="line">code block
+</span></code></pre></div></div>
+```
 
 ### 未対応の言語でも行番号だけ表示する
 
-- *_plugins/kramdown-syntax-highlight-patch.rb*
-  ```diff
-     def call(converter, text, lang, type, call_opts)
-       opts = options(converter, type)
-       call_opts[:default_lang] = opts[:default_lang]
-       return nil unless lang || opts[:default_lang] || opts[:guess_lang]
-   
-       lexer = ::Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
-  +    return nil if !lexer && !lang
-  +    return call(converter, text, nil, type, call_opts) unless lexer
-       return nil if opts[:disable] || (lexer.tag == "plaintext" && !opts[:guess_lang])
-   
-       opts[:css_class] ||= 'highlight'
-       formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
-       if opts[:wrap] && !formatter.is_a?(Rouge::Formatters::HTMLPygments)
-         formatter = Rouge::Formatters::HTMLPygments.new(formatter, opts.fetch(:css_class, 'codehilite'))
-       end
-       formatter.format(lexer.lex(text))
-     end
-  ```
+```diff
+--- b/_plugins/kramdown-syntax-highlighter-rouge-patch.rb
++++ c/_plugins/kramdown-syntax-highlighter-rouge-patch.rb
+@@ -7,7 +7,9 @@
+     return nil unless lang || opts[:default_lang] || opts[:guess_lang]
+ 
+     lexer = ::Rouge::Lexer.find_fancy(lang || opts[:default_lang], text)
+-    return nil if opts[:disable] || !lexer || (lexer.tag == "plaintext" && !opts[:guess_lang])
++    return nil if !lexer && !lang
++    return call(converter, text, nil, type, call_opts) unless lexer
++    return nil if opts[:disable] || (lexer.tag == "plaintext" && !opts[:guess_lang])
+ 
+     opts[:css_class] ||= 'highlight'
+     formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
+```
 
 未対応の言語で `Rouge::Lexer` が `nil` を返した時に `:default_lang` でフォールバックする。
 

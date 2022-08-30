@@ -91,7 +91,7 @@ Oracle Cloud では cloud-init サービス が `dhclient` を呼ぶことで VN
 
 ~~Oracle Cloud VCN で相互に通信する必要がある場合は `ip daddr 10.0.0.0/24 accept` などで Private IP は素通りさせるように設定する必要があるかもしれない？~~
 
-```nft
+```nft?filename=/etc/nftables.conf
 #!/usr/sbin/nft -f
 
 flush ruleset

@@ -28,7 +28,7 @@ docker-composeは`docker --volumes-from`と同様のプロパティをv3にな�
 ## docker-compose v3で廃止された`volumes_from`に相当する設定
 とにかくvolumes_fromと同じことをしなくてはいけない。Docker公式のドキュメントにはnamed volumesを設定するといいとある[^2]ので適当にvolumesを設定してみることにした
 
-```yaml
+```yaml?filename=compose.yml
 version: '3.5'
 services:
 
@@ -92,63 +92,59 @@ volumes:
 どうやら`depends_on`でnginx-proxy serviceを設定するといいらしい  
 <https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion/issues/102#issuecomment-463573796>
 
-なので最終的に以下のdocker-compose.ymlで動くようになった
+なので最終的に以下の変更で動くようになった
 
-```yaml
-version: '3.5'
-services:
-
-  nginx-proxy:
-    image: jwilder/nginx-proxy:alpine
-    restart: always
-    network_mode: host
-    environment:
-      - ENABLE_IPV6=true
-      - VIRTUAL_HOST=kpherox.dev,www.kpherox.dev
-      - LETSENCRYPT_HOST=kpherox.dev,www.kpherox.dev
-    volumes:
-      - doc_root:/var/www
-      - html:/usr/share/nginx/html
-      - dhparam:/etc/nginx/dhparam
-      - vhost:/etc/nginx/vhost.d
-      - certs:/etc/nginx/certs:ro
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    labels:
-      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
-
-  autocert:
-    image: jrcs/letsencrypt-nginx-proxy-companion:latest
-    restart: always
-    depends_on:
-      - "nginx-proxy"
-    environment:
-      - DEFAULT_EMAIL=admin@mail.kr-kp.com
-      - VIRTUAL_HOST=kpherox.dev,www.kpherox.dev
-    volumes:
-      - doc_root:/var/www
-      - html:/usr/share/nginx/html
-      - certs:/etc/nginx/certs:rw
-      - vhost:/etc/nginx/vhost.d
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-
-volumes:
-  doc_root:
-    driver_opts:
-      type: none
-      o: bind
-      device: /path/to/document_root
-  html:
-    driver_opts:
-      type: none
-      o: bind
-      device: /path/to/html
-  vhost:
-    driver_opts:
-      type: none
-      o: bind
-      device: /path/to/vhost.d
-  dhparam:
-  certs:
+```diff
+--- old/compose.yml
++++ new/compose.yml
+@@ -3,10 +3,8 @@
+ 
+   nginx-proxy:
+     image: jwilder/nginx-proxy:alpine
++    restart: always
+     network_mode: host
+-    ports:
+-      - "443:443"
+-      - "80:80"
+     environment:
+       - ENABLE_IPV6=true
+       - VIRTUAL_HOST=kpherox.dev,www.kpherox.dev
+@@ -15,17 +13,22 @@
+       - doc_root:/var/www
+       - html:/usr/share/nginx/html
+       - dhparam:/etc/nginx/dhparam
+-      - conf:/etc/nginx/conf.d
+       - vhost:/etc/nginx/vhost.d
+       - certs:/etc/nginx/certs:ro
+       - /var/run/docker.sock:/tmp/docker.sock:ro
++    labels:
++      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+ 
+   autocert:
+     image: jrcs/letsencrypt-nginx-proxy-companion:latest
++    restart: always
++    depends_on:
++      - "nginx-proxy"
+     environment:
+       - DEFAULT_EMAIL=admin@mail.kr-kp.com
+       - VIRTUAL_HOST=kpherox.dev,www.kpherox.dev
+     volumes:
++      - doc_root:/var/www
+       - html:/usr/share/nginx/html
+       - certs:/etc/nginx/certs:rw
+       - vhost:/etc/nginx/vhost.d
+@@ -42,11 +45,6 @@
+       type: none
+       o: bind
+       device: /path/to/html
+-  conf:
+-    driver_opts:
+-      type: none
+-      o: bind
+-      device: /path/to/conf.d
+   vhost:
+     driver_opts:
+       type: none
 ```
 
 実際にはpleromaを別のdocker-composeで動かしてるので`nginx-proxy`を`network_mode: host`にして`conf.d`も`nginx-proxy`のvolumesに追加してupstreamにpleromaを追加している。pleromaを更新する時にdockerのscaleを使ってコンテナを切り替えるようにしてるので複数のportへプロキシする必要があるためこうしている
