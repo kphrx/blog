@@ -11,6 +11,8 @@ module KramdownSyntaxHighlighterFix
     return call(converter, text, nil, type, call_opts) unless lexer
     return nil if opts[:disable] || (lexer.tag == "plaintext" && !opts[:guess_lang])
 
+    call_opts[:lang] = lexer.tag
+
     opts[:css_class] ||= 'highlight'
     formatter = new_formatter(formatter_class(opts), opts) # initialize 呼び出しを包む
     if opts[:wrap] && !formatter.is_a?(Rouge::Formatters::HTMLPygments)

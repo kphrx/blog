@@ -352,7 +352,7 @@ div.highlighter-rouge {
       }
     }
   }
-  &:not(.language-console):not(.language-terminal):not(.language-shell_session):not(.language-shell-session) {
+  &:not(.language-console) {
     --lineno-width: 5ex;
     > div.highlight > pre.highlight {
       counter-reset: line-number;
