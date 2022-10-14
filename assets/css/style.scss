@@ -19,6 +19,15 @@ body {
   @import "table-of-contents";
   @import "highlight";
 
+  hr {
+    background-color: var(--symbol-color);
+  }
+
+  blockquote {
+    color: var(--text-sub-color);
+    border-color: var(--table-border-color);
+  }
+
   del {
     color: var(--text-sub-color);
   }
@@ -55,6 +64,6 @@ body {
   }
 
   .anchorjs-link, .reversefootnote {
-    color: var(--text-sub-color);
+    color: var(--symbol-color);
   }
 }
