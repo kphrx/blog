@@ -1,1 +1,5 @@
 {% feed_meta %}
+
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}" />
+{% endif %}
