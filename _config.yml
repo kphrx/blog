@@ -6,28 +6,27 @@ pagination:
   sort_reverse: true
   per_page: 8
   permalink: page/:num.html
-  title: ':title'
 
 autopages:
   enabled: true
   tags:
     layouts:
       - autopage.html
-    title: Posts tagged with ":tag"
+    title: "Posts tagged with :tag"
     permalink: /tag/:tag
     slugify:
       case: false
   categories:
     layouts:
       - autopage.html
-    title: Posts in category ":cat"
+    title: "Posts in category :cat"
     permalink: /:cat
     slugify:
       case: false
   collections:
     layouts:
       - autopage.html
-    title: Posts in collection ":coll"
+    title: "Posts in collection :coll"
     permalink: /collection/:coll
     slugify:
       case: false

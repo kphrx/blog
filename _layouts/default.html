@@ -2,12 +2,13 @@
 <html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{- page.title -}}
+      {% if page.layout != 'home' %} | {{ site.title }}{% endif -%}
+    </title>
 
-{% seo %}
+    {%- include meta.html -%}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    {% include head-custom.html %}
   </head>
   <body class="container-lg px-3 markdown-body">
     <header class=site-header>
