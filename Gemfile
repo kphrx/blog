@@ -39,6 +39,8 @@ group :jekyll_plugins do
   # gem "jekyll-gist", "~> 1.5" # Gist embeds tag
 
   # gem "jekyll-include-cache", "~> 0.2" # Cache of Liquid includes for build
+
+  gem "jekyll-last-modified", "~> 1.0"
 end
 
 group :development, :test do
