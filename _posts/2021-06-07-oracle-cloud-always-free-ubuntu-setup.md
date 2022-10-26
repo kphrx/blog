@@ -1,6 +1,8 @@
 ---
-date:       2021-06-07 02:50:15 +0900
-category:   blog
+category: tech
+date: '2021-06-07 02:50:15 +0900'
+redirect_from:
+  - /blog/oracle-cloud-always-free-ubuntu-setup
 ---
 
 # Oracle Cloud Always Free の Canonical Ubuntu 20.04 (Minimal) のセットアップ

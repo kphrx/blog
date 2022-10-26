@@ -1,6 +1,8 @@
 ---
-date:       2018-10-12 18:08:07 +0900
-category:   coding
+category: tech
+date: '2018-10-12 18:08:07 +0900'
+redirect_from:
+  - /coding/add-line-number-to-pre-tag
 ---
 
 # preに行番号を追加してスクロールで動かないようにする

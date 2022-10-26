@@ -1,6 +1,8 @@
 ---
-date:       2019-11-30 00:18:33 +0900
-category:   blog
+category: misc
+date: '2019-11-30 00:18:33 +0900'
+redirect_from:
+  - /blog/change-vps-server
 ---
 
 # サーバーを引っ越した話

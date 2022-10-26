@@ -1,6 +1,8 @@
 ---
-date:       2017-04-10 00:00:14 +0900
-category:   blog
+category: misc
+date: '2017-04-10 00:00:14 +0900'
+redirect_from:
+  - /blog/bought-win10-parallels12
 ---
 
 # Windows10とParallels12買った話

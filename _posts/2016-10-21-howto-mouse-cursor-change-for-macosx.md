@@ -1,6 +1,6 @@
 ---
-date:       2016-10-21 00:00:10 +0900
-category:   macos
+category: macos
+date: '2016-10-21 00:00:10 +0900'
 ---
 
 # Mousecape – Mac OS X でマウスカーソルを変更する方法

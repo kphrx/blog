@@ -1,6 +1,8 @@
 ---
-date:       2019-04-01 21:25:20 +0900
-category:   blog
+category: misc
+date: '2019-04-01 21:25:20 +0900'
+redirect_from:
+  - /blog/nowplayingtweet-new-release-and-milestone-0-6
 ---
 
 # NowPlayingTweet の新規リリースと 0.6 について

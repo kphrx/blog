@@ -1,9 +1,10 @@
 ---
-date:       2018-10-11 14:47:09 +0900
-eye_catch:  /assets/images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai.png
-category:   kancolle
+category: game
+eye_catch: /assets/images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai.png
+date: '2018-10-11 14:47:09 +0900'
 redirect_from:
   - /games/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai
+  - /kancolle/kanmusu-list-formatter-plugin-for-logbook-kai
 ---
 
 # 航海日誌（logbook-kai）で艦隊晒しページのフォーマットを生成するプラグイン

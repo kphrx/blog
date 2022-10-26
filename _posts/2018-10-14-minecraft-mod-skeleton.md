@@ -1,8 +1,9 @@
 ---
-date:       2018-10-14 22:56:01 +0900
-category:   minecraft
+category: game
+date: '2018-10-14 22:56:01 +0900'
 redirect_from:
   - /games/minecraft/minecraft-mod-skeleton
+  - /minecraft/minecraft-mod-skeleton
 ---
 
 # MinecraftのMod導入環境のスケルトンみたいなものを作った

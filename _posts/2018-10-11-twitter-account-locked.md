@@ -1,7 +1,9 @@
 ---
-date:       2018-10-11 15:14:38 +0900
-eye_catch:  /assets/images/eye-catch/blog/twitter-account-locked.png
-category:   blog
+category: misc
+eye_catch: /assets/images/eye-catch/blog/twitter-account-locked.png
+date: '2018-10-11 15:14:38 +0900'
+redirect_from:
+  - /blog/twitter-account-locked
 ---
 
 # 年齢制限でTwitterのアカウントロックされた話

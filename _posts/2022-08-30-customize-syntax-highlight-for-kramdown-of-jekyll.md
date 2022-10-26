@@ -1,6 +1,8 @@
 ---
-category: coding
+category: tech
 date: '2022-08-30 05:12:18 +0900'
+redirect_from:
+  - /coding/customize-syntax-highlight-for-kramdown-of-jekyll
 ---
 # Jekyll v4 の syntax highlight に Rouge::Formatters::HTMLLinewise を使えるようにする
 

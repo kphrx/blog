@@ -1,6 +1,8 @@
 ---
-date:       2018-10-11 17:49:17 +0900
-category:   windows
+category: tech
+date: '2018-10-11 17:49:17 +0900'
+redirect_from:
+  - /windows/clear-trash-with-shortcut
 ---
 
 # ゴミ箱を右クリックせずに空にする
