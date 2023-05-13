@@ -406,6 +406,7 @@ div.highlighter-rouge {
 
       padding: 0;
       overscroll-behavior-x: none;
+      padding-left: calc(var(--lineno-width) + var(--padding-x));
 
       > code > span.line {
         counter-increment: line-number;
@@ -425,7 +426,8 @@ div.highlighter-rouge {
           background-color: var(--base02);
           color: var(--base00);
 
-          margin-right: var(--padding-x);
+          margin-right: calc(var(--lineno-width) * -1);
+          translate: calc((var(--lineno-width) + var(--padding-x)) * -1);
         }
 
         &:first-child::before {
