@@ -64,7 +64,7 @@ $ sudo systemctl restart ddclient
 
 - Rapture Automatic Signing Key (cloud-rapture-signing-key-2022-03-07-08_01_01.pub)
   - Fingerprint: A362B822F6DEDC652817EA46B53DC80D13EDEF05
-- Artifact Registry Repository Signer &gt;artifact-registry-repository-signer@google.com&lt;
+- Artifact Registry Repository Signer &lt;artifact-registry-repository-signer@google.com&gt;
   - Fingerprint: 35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3
 
 `/etc/apt/trusted.gpg` に追加されてる鍵は以下のコマンドで確認できる
