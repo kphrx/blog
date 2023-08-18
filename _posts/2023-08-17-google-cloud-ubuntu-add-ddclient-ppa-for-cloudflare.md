@@ -48,7 +48,7 @@ $ sudo apt install -y ddclient
    ```
 
 6. 以下を実行して成功するのを確認する。IPを取得できない場合は `api.ipify.org` を `ident.me` などの別のIPを確認できるドメインに変更する。 zone が必要とするエラーが発生した場合は `/etc/ddclient.conf` の途中に `zone=example.com \` の行を追加する。 `example.com` は利用しているドメインの apex になる
-```termianl
+```terminal
 $ sudo ddclient -daemon=0 -verbose -force
 ```
 
