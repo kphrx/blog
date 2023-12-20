@@ -4,7 +4,7 @@ gem "jekyll", "~> 4.2"
 
 gem "jekyll-theme-primer", "~> 0.6" # Theme
 
-group :jekyll_plugins do
+group :production, :jekyll_plugins do
   #gem "jekyll-remote-theme", "~> 0.4" # to use GitHub-hosted themes
 
   ## primer dependencies
