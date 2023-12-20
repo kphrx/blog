@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.2"
+gem "jekyll", "~> 4.3"
 
 gem "jekyll-theme-primer", "~> 0.6" # Theme
 
@@ -8,7 +8,7 @@ group :production, :jekyll_plugins do
   #gem "jekyll-remote-theme", "~> 0.4" # to use GitHub-hosted themes
 
   ## primer dependencies
-  gem "jekyll-github-metadata", "~> 2.15" # GitHub metadata
+  gem "jekyll-github-metadata", "~> 2.16" # GitHub metadata
   gem "jekyll-seo-tag", "~> 2.8" # Site metadata
 
   ## Markdown converter for GitHub Flavored Markdown
@@ -24,7 +24,7 @@ group :production, :jekyll_plugins do
 
   gem "jekyll-default-layout", "~> 0.1" # Automatically sets layout
 
-  gem "jekyll-relative-links", "~> 0.6" # Relative links to markdown file
+  gem "jekyll-relative-links", "~> 0.7" # Relative links to markdown file
   gem "jekyll-redirect-from", "~> 0.16" # Redirection from another posts
 
   # gem "jekyll-readme-index", "~> 0.3" # README to index.html
