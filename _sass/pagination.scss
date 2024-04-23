@@ -1,5 +1,8 @@
 nav.pagination {
   margin: 1em;
+  display: flex;
+  gap: 1ex;
+  justify-content: space-between;
 
   span {
     &.first, &.previous, &.next, &.last {
