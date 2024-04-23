@@ -4,10 +4,8 @@ nav.pagination {
   gap: 1ex;
   justify-content: space-between;
 
-  span {
-    &.first, &.previous, &.next, &.last {
-      color: var(--text-sub-color);
-    }
+  div:is(.back, .fore) > span:where(.first, .previous, .next, .last) {
+    color: var(--text-sub-color);
   }
 }
 
