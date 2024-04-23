@@ -13,12 +13,12 @@
     {%- endif %}
   </div>
   <div class=fore>
-    {% if paginator.paginator.next_page -%}
+    {% if paginator.next_page -%}
       <a href="{{ paginator.next_page_path }}" class=next>Next</a>
     {%- else -%}
       <span class=next>Next</span>
     {%- endif %}
-    {% if next_page <= paginator.last_page -%}
+    {% if paginator.next_page <= paginator.last_page -%}
       <a href="{{ paginator.last_page_path }}" class=last>Last</a>
     {%- else -%}
       <span class=last>Last</span>
