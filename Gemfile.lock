@@ -6,7 +6,7 @@ GEM
     base64 (0.2.0)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
-    dotenv (2.8.1)
+    dotenv (3.1.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -113,7 +113,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv (~> 2.8)
+  dotenv (~> 3.1)
   faraday-retry (~> 2.0)
   jekyll (~> 4.3)
   jekyll-compose (~> 0.12)
