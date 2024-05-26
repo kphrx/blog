@@ -3,7 +3,6 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    base64 (0.2.0)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     dotenv (2.8.1)
@@ -11,12 +10,11 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
-    faraday (2.8.1)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
-    faraday-retry (2.0.0)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
+    faraday-retry (2.2.1)
       faraday (~> 2.0)
     ffi (1.16.3)
     forwardable-extended (2.6.0)
@@ -83,6 +81,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    net-http (0.4.1)
+      uri
     octicons (19.8.0)
     octokit (6.1.1)
       faraday (>= 1, < 3)
@@ -97,7 +97,6 @@ GEM
     rexml (3.2.8)
       strscan (>= 3.0.9)
     rouge (4.2.0)
-    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
     sass-embedded (1.69.6)
       google-protobuf (~> 3.25)
@@ -109,6 +108,7 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.5.0)
+    uri (0.13.0)
     webrick (1.7.0)
 
 PLATFORMS
@@ -116,7 +116,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv (~> 2.8)
-  faraday-retry (~> 2.0)
+  faraday-retry (~> 2.2)
   jekyll (~> 4.3)
   jekyll-compose (~> 0.12)
   jekyll-default-layout (~> 0.1)
