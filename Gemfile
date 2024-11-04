@@ -46,6 +46,6 @@ end
 group :development, :test do
   gem "faraday-retry", "~> 2.2"
   gem 'dotenv', "~> 3.1"
-  gem "webrick", "~> 1.8"
+  gem "webrick", "~> 1.9"
   gem "jekyll-compose", "~> 0.12"
 end
