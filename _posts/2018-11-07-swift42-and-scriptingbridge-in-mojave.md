@@ -28,7 +28,7 @@ Scripting BridgeでiTunesへアクセスするためにどの権限を利用す�
 2. `com.apple.iTunes` に `com.apple.iTunes.playback` を追加する
 
 権限は次のコマンドでxmlを出力して利用する `command` や `property` の `access-group` の `identifier` を参照してください
-```terminal
+```console
 $ sdef /Applications/iTunes.app > itunes.sdef.xml
 ```
 

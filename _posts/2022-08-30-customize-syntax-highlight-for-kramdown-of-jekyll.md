@@ -51,7 +51,7 @@ code block
 
 行番号が必要なのは block だけなので `:kramdown, :syntax_highlighter_opts, :block` の `:formatter` に HTMLLinewise を指定して `:tag_name` と `:class` を設定する。
 
-```terminal?prompt=$
+```console?prompt=$
 $ bundle exec jekyll build --trace
 Configuration file: ./sample-jekyll/_config.yml
             Source: ./sample-jekyll
@@ -135,7 +135,7 @@ Kramdown::Converter::SyntaxHighlighter::Rouge.singleton_class.prepend(KramdownSy
 
 これで各行が `<span class=line>` `\n</span>` で囲われてマークアップされた index.html が生成される
 
-```terminal
+```console
 $ bundle exec jekyll build --trace
 Configuration file: ./sample-jekyll/_config.yml
             Source: ./sample-jekyll

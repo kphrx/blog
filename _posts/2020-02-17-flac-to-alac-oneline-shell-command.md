@@ -14,7 +14,7 @@ redirect_from:
 必要なものはFFmpegなので`brew install ffmpeg`とかで入れておく
 
 moraDownloaderでダウンロードしたflacをalacに変換するワンライナー。別の方法でダウンロードしたものは`~/Music/mora/**/*.flac`を`~/Downloades/**/*.flac`とかに適宜置き換えてください
-```terminal
+```console
 $ for i in ~/Music/mora/**/*.flac; do if test ! -e "${i:r}.m4a"; then ffmpeg -i "$i" -c:a alac -c:v copy "${i:r}.m4a"; fi; done
 ```
 

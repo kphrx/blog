@@ -26,12 +26,12 @@ Homebrew caskからインストールできるようにしてあります
 homebrew-caskを入れてない方は、あらかじめ `brew tap homebrew/cask` を実行してcaskを使えるようにする必要があります
 
 1. `kpherox/personal` をtapして私の個人リポジトリをbrewに追加
-    ```terminal
+    ```console
     $ brew tap kpherox/personal
     ```
 
 2. `nowplayingtweet` をインストール
-    ```terminal
+    ```console
     $ brew cask install kpherox/personal/nowplayingtweet
     ```
 

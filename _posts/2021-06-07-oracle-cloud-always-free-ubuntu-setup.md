@@ -17,7 +17,7 @@ Oracle Cloud の Canonical Ubuntu 20.04 (Minimal) は何も設定しないと、
 ## `APT::Install-*` と Docker と nftables をまとめて設定
 GitHub Gist でスクリプトを公開してあるので `curl | bash` してしまう  
 <https://gist.github.com/kphrx/ae6f2dfd0e12ba70a8f6c9d338272ba7>
-```terminal
+```console
 $ curl -fsSL https://gist.github.com/kphrx/ae6f2dfd0e12ba70a8f6c9d338272ba7/raw/ubuntu_minimal_docker_nftables_install.bash | bash
 ```
 
@@ -37,29 +37,29 @@ Ubuntu Minimal には `emacs` も `nano` も `vim` や `vi` ですら入って�
 
 ### `apt autoremove` と 再起動
 `apt autoremove` に相当する `Unattended-Upgrade::Remove-Unused-Dependencies` と 再起動が必要な時に勝手に再起動させる `Unattended-Upgrade::Automatic-Reboot` を `true` にする
-```terminal
+```console
 $ sudo sed -i'' -e's#//\(Unattended-Upgrade::\(Remove-Unused-Dependencies\|Automatic-Reboot\) "\)false\(";\)#\1true\3#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
 `Unattended-Upgrade::Automatic-Reboot "true"` にした時の再起動の時間を 02:00 UTC から 04:00 JST にする
 - 19:00 UTC で日本時間4時にする
-```terminal
+```console
 $ sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "\)02\(:00";\)#\119\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 - timezone を `Asia/Tokyo` にして 04:00 JST を設定する
-```terminal
+```console
 $ sudo timedatectl set-timezone Asia/Tokyo
 $ sudo sed -i'' -e's#//\(Unattended-Upgrade::Automatic-Reboot-Time "\)02\(:00";\)#\104\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
 ### メール通知
 自動更新の通知をメールで受け取るには `Unattended-Upgrade::Mail` にメールアドレスを入れる
-```terminal
+```console
 $ sudo sed -i'' -e's#//\(Unattended-Upgrade::Mail "\)\(";\)#\1user@mail.example.com\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
 メールをエラーが起きた時だけにする場合は `Unattended-Upgrade::MailReport` を `only-on-error` にする
-```terminal
+```console
 $ sudo sed -i'' -e's#//\(Unattended-Upgrade::MailReport "\)on-change\(";\)#\1only-on-error\2#' /etc/apt/apt.conf.d/50unattended-upgrades
 ```
 
@@ -143,7 +143,7 @@ table ip filter {
 
 `iptables-restore` を呼んでいる `netfilter-persistent.service` を無効にして `nftables.service` を有効化する
 
-```terminal
+```console
 $ sudo systemctl disable netfilter-persistent
 $ sudo systemctl enable nftables
 $ sudo reboot

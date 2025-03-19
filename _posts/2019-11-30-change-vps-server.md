@@ -32,7 +32,7 @@ OSと `cat /proc/cpuinfo` の結果を載せておきます
 
 - *ConoHa VPS 1GBプラン*
   Ubuntu 16.04 -> do-release-upgradeでUbuntu 18.04に更新
-   ```terminal
+   ```console
    $ cat /proc/cpuinfo
    processor	: 0
    vendor_id	: GenuineIntel
@@ -91,7 +91,7 @@ OSと `cat /proc/cpuinfo` の結果を載せておきます
 
 - *さくらのVPS 512MBプラン*
   Debian 10
-   ```terminal
+   ```console
    $ cat /proc/cpuinfo
    processor	: 0
    vendor_id	: GenuineIntel

@@ -18,7 +18,7 @@ Caskのバージョンは日本語以外のバージョンは`:latest`。日本�
 
 ### 日本語版 `font-line-seed-jp`
 
-```sh
+```console
 $ brew install kphrx/personal/font-line-seed-jp
 ```
 
@@ -60,7 +60,7 @@ App, Web, Desktopの3種類入っていて、AppとDesktopはそれぞれTTFとO
 
 ### 英語版 `font-line-seed-en`
 
-```sh
+```console
 $ brew install kphrx/personal/font-line-seed-en
 ```
 
@@ -109,7 +109,7 @@ App, Web, Desktopの3種類入っていて、AppとDesktopはそれぞれTTFとO
 
 ### 韓国語版 `font-line-seed-kr`
 
-```sh
+```console
 $ brew install kphrx/personal/font-line-seed-kr
 ```
 
@@ -138,7 +138,7 @@ TTFとOTF、WebfontはWOFF/WOFF2/EOTが用意されている
 
 ### タイ語版 `font-line-seed-th`
 
-```sh
+```console
 $ brew install kphrx/personal/font-line-seed-th
 ```
 
