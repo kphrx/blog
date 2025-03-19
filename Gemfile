@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 4.4"
 
 gem "jekyll-theme-primer", "~> 0.6" # Theme
 
