@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>
       {{- page.title -}}
-      {% if page.layout != 'home' %} | {{ site.title }}{% endif -%}
+      {%- if page.layout != 'home' %} | {{ site.title }}{% endif -%}
     </title>
 
-    {% if page.layout != 'home' and page.layout != 'autopage' and page.anchor.disabled != true -%}
+    {%- if page.layout != 'home' and page.layout != 'autopage' and page.anchor.disabled != true %}
     <script type="module">
       import {default as AnchorJS} from 'https://esm.run/anchor-js@5';
 
@@ -20,10 +20,13 @@
         });
       }
     </script>
-    {% endif -%}
+    {%- endif %}
 
-    {%- include meta.html -%}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {%- if layout.isPagenate %}
+    <link rel="stylesheet" href="{{ "/assets/css/paginate.css?v=" | append: site.github.build_revision | relative_url }}">
+    {%- endif %}
+{% include meta.html %}
   </head>
   <body class="container-lg px-3 markdown-body">
     <header class=site-header>

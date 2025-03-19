@@ -1,4 +1,3 @@
-{% if paginator.total_pages > 1 -%}
 <nav class="pagination">
   <div class=back>
     {% if paginator.previous_page_path == paginator.first_page_path -%}
@@ -29,4 +28,3 @@
     {%- endif %}
   </div>
 </nav>
-{%- endif %}
