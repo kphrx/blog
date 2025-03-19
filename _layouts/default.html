@@ -8,11 +8,17 @@
     </title>
 
     {% if page.layout != 'home' and page.layout != 'autopage' and page.anchor.disabled != true -%}
-    <script defer crossorigin=anonymous
-            src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-            integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => window.anchors.add());
+    <script type="module">
+      import {default as AnchorJS} from 'https://esm.run/anchor-js@5';
+
+      const anchors = new AnchorJS();
+      if (document.readyState !== 'loading') {
+        anchors.add();
+      } else {
+        document.addEventListener('DOMContentLoaded', () => {
+          anchors.add();
+        });
+      }
     </script>
     {% endif -%}
 
