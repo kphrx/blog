@@ -3,6 +3,7 @@
   --fg-color: #fff;
   --text-color: #24292e;
   --text-sub-color: #6e7781;
+  --text-accent-color: #0366d6;
   --heading-color: #24292e;
   --border-color: #eaecef;
   --symbol-color: #e1e4e8;
@@ -15,6 +16,7 @@
     --fg-color: #222;
     --text-color: #bebebe;
     --text-sub-color: #888f98;
+    --text-accent-color: #76d603;
     --heading-color: #cdcdcd;
     --border-color: #4c4c4c;
     --symbol-color: #484f58;
@@ -116,7 +118,7 @@ body {
   }
 
   a {
-    color: #0366d6;
+    color: var(--text-accent-color);
     text-decoration: none;
   }
 

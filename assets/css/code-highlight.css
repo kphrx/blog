@@ -89,8 +89,7 @@ div.highlight > pre.highlight {
     }
     /* unknowns */
     .kr, .kv {
-      color: var(--green);
-      background-color: var(--violet);
+      color: var(--red);
     }
 
     /* Name, 'n' */
@@ -121,16 +120,14 @@ div.highlight > pre.highlight {
     }
     /* without Pygments */
     .n {
-      color: inherit;
-      background-color: var(--base02);
+      color: var(--orange);
     }
     .na {
       color: var(--yellow);
     }
     /* unknowns */
     .py, .nx, .vc, .vi {
-      color: inherit;
-      background-color: var(--violet);
+      color: var(--red);
     }
 
     /* Literal,      'l' */
@@ -138,8 +135,7 @@ div.highlight > pre.highlight {
     /* without Pygments */
     /* unknowns */
     .l, .ld {
-      color: inherit;
-      background-color: var(--violet);
+      color: var(--red);
     }
 
     /* Literal.String */
@@ -174,8 +170,7 @@ div.highlight > pre.highlight {
     }
     /* unknowns */
     .sa, .sb, .sc, .dl, .se, .sh, .si, .sx {
-      color: var(--cyan);
-      background-color: var(--violet);
+      color: var(--violet);
     }
 
     /* Literal.Number */
@@ -195,8 +190,7 @@ div.highlight > pre.highlight {
     }
     /* unknowns */
     .mb, .mf, .mh, .il, .mo, .mx {
-      color: var(--cyan);
-      background-color: var(--violet);
+      color: var(--red);
     }
 
     /* Operator */
@@ -253,7 +247,6 @@ div.highlight > pre.highlight {
     .cd, .cs {
       font-style: italic;
       color: var(--base01);
-      background-color: var(--violet);
     }
 
     /* Generic */
@@ -315,8 +308,8 @@ div.highlight > pre.highlight {
     /* without Pygments */
     /* unknowns */
     .gl {
+      font-weight: lighter;
       color: var(--base0);
-      background-color: var(--violet);
     }
   }
 }
