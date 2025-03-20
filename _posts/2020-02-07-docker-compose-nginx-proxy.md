@@ -3,6 +3,7 @@ category: tech
 date: '2020-02-07 21:21:13 +0900'
 redirect_from:
   - /blog/docker-compose-nginx-proxy
+hasCodeSnippet: true
 ---
 
 # docker-composeを使ってnginxのリバースプロキシを設置する

@@ -1,8 +1,3 @@
----
----
-
-@import "{{ site.theme }}";
-
 :root {
   --bg-color: #ddd;
   --fg-color: #fff;
@@ -29,32 +24,115 @@
   }
 }
 
+.highlighter-rouge {
+  --base1:   #586e75;
+  --base03:  #fdf6e3;
+
+  @media (prefers-color-scheme: dark) {
+    --base03:  #002b36;
+    --base1:   #93a1a1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
-}
 
-.markdown-body {
-  h1, h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  .site-title, .page-title, .post-title {
     color: var(--heading-color);
-    border-color: var(--border-color);
   }
 
-  .site-title > a {
-    color: inherit;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+
+    margin-block: 1.5rem 1rem;
+    padding-bottom: 0.3em;
+
+    border-color: var(--border-color);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .site-title {
+    font-size: 2rem;
+
+    > a {
+      color: inherit;
+    }
   }
 
   .page-title {
     text-transform: uppercase;
-    font-size: 1.8em;
   }
 
   .post-title, .page-title {
     margin-top: 0;
-    font-size: 1.8em;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-block: 0 1rem;
+  }
+
+  code {
+    color: var(--base1);
+    background-color: var(--base03);
+
+    font-size: 85%;
+
+    padding: 0.2em 0.4em;
+  }
+
+  kbd {
+    color: #444d56;
+    background-color: #fafbfc;
+
+    font-size: 68%;
+    line-height: 1;
+
+    padding: 0.2rem 0.3rem;
+    vertical-align: middle;
+
+    border-color: var(--border-color);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+  }
+
+  a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+
+  /* MARK: Block */
+
+  img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: var(--fg-color);
   }
 
   table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+
     tr {
       background-color: var(--table-bg-color);
 
@@ -64,18 +142,20 @@ body {
     }
 
     th, td {
+      padding: 0.4rem 0.8rem;
+
       border-color: var(--table-border-color);
     }
   }
 
-  dl {
-    & > dt, & > dd {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  dl > :is(dt, dd) {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  @import "highlight";
+  pre {
+    background-color: var(--base03);
+  }
 
   hr {
     background-color: var(--symbol-color);
@@ -92,7 +172,6 @@ body {
 
   .post, .page {
     background: var(--fg-color);
-    margin: 1em auto;
     padding: 1em;
   }
 

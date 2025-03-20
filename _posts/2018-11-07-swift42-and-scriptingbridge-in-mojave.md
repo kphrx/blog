@@ -3,6 +3,7 @@ category: tech
 date: '2018-11-07 19:15:36 +0900'
 redirect_from:
   - /coding/swift42-and-scriptingbridge-in-mojave
+hasCodeSnippet: true
 ---
 
 # macOS MojaveでSwift 4.2 + Scripting Bridge

@@ -9,32 +9,50 @@ nav.pagination {
   }
 }
 
-.post-wrap {
-  color: var(--text-color);
+ul.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-  .post {
-    .post-header {
-      & > .post-title {
-        margin-bottom: 0;
-        border: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li > a {
+    color: var(--text-color);
+
+    &:hover {
+      text-decoration: none;
+
+      .post {
+        background-color: color-mix(in srgb, var(--fg-color), var(--text-color) 10%);
       }
+    }
+  }
+}
 
-      & > .eye-catch {
+.post {
+  .post-header {
+    & > .post-title {
+      margin-bottom: 0;
+      border: none;
+    }
+
+    & > .eye-catch {
+      float: right;
+      width: 32%;
+      max-width: 320px;
+
+      & > img {
+        object-fit: cover;
         float: right;
-        width: 32%;
-        max-width: 320px;
-
-        & > img {
-          object-fit: cover;
-          float: right;
-          height: 96px;
-          max-height: 96px;
-        }
+        height: 96px;
+        max-height: 96px;
       }
     }
+  }
 
-    > p {
-      margin-bottom: 0
-    }
+  > p {
+    margin-bottom: 0
   }
 }

@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem "jekyll", "~> 4.4"
 
-gem "jekyll-theme-primer", "~> 0.6" # Theme
-
 group :production, :jekyll_plugins do
   #gem "jekyll-remote-theme", "~> 0.4" # to use GitHub-hosted themes
 

@@ -3,6 +3,7 @@ category: tech
 date: '2020-02-17 20:13:06 +0900'
 redirect_from:
   - /blog/flac-to-alac-oneline-shell-command
+hasCodeSnippet: true
 ---
 
 # macOSでflacをalacに変換するワンライナー

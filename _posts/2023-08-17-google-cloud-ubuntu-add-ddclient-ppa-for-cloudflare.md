@@ -1,6 +1,7 @@
 ---
 category: tech
 date: '2023-08-17 23:47:47 +0900'
+hasCodeSnippet: true
 ---
 # Google Cloud の Compute で Ubuntu 22.04 (minimal) + ddclient + Cloudflare のセットアップ
 

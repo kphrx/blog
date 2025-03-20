@@ -1,6 +1,7 @@
 ---
 category: tech
 date: '2022-10-27 00:03:47 +0900'
+hasCodeSnippet: true
 ---
 # フォント『LINE Seed Sans』をHomebrew Caskで管理する
 

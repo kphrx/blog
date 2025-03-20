@@ -3,6 +3,7 @@ category: tech
 date: '2018-10-11 17:49:17 +0900'
 redirect_from:
   - /windows/clear-trash-with-shortcut
+hasCodeSnippet: true
 ---
 
 # ゴミ箱を右クリックせずに空にする

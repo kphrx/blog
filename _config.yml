@@ -41,8 +41,6 @@ titles_from_headings:
   strip_title: true
   collections: true
 
-theme: jekyll-theme-primer
-
 lang: ja
 
 markdown: kramdown

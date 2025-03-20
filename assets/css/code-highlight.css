@@ -1,13 +1,12 @@
-
 .highlighter-rouge {
   --base3:   #002b36;
   --base2:   #073642;
-  --base1:   #586e75;
+  /* --base1:   #586e75; */
   --base0:   #657b83;
   --base00:  #839496;
   --base01:  #93a1a1;
   --base02:  #eee8d5;
-  --base03:  #fdf6e3;
+  /* --base03:  #fdf6e3; */
 
   --yellow:  #b58900;
   --orange:  #cb4b16;
@@ -19,12 +18,12 @@
   --green:   #859900;
 
   @media (prefers-color-scheme: dark) {
-    --base03:  #002b36;
+    /* --base03:  #002b36; */
     --base02:  #073642;
     --base01:  #586e75;
     --base00:  #657b83;
     --base0:   #839496;
-    --base1:   #93a1a1;
+    /* --base1:   #93a1a1; */
     --base2:   #eee8d5;
     --base3:   #fdf6e3;
 
@@ -39,96 +38,88 @@
   }
 }
 
-pre {
-  background-color: var(--base03);
-}
-code {
-  background-color: var(--base03);
-  color: var(--base1);
-}
-
 div.highlight > pre.highlight {
-  // Solarized color scheme
+  /* Solarized color scheme */
   background-color: var(--base03);
 
   > code {
-    // Text
+    /* Text */
     color: var(--base0) !important;
-    // Text.Whitespace, 'w'
-    // without Pygments
+    /* Text.Whitespace, 'w' */
+    /* without Pygments */
     .w {
       color: var(--base01);
     }
 
-    // Escape, 'esc'
-    // Error
+    /* Escape, 'esc' */
+    /* Error */
     .err {
-      //color: var(--base03);
+      /* color: var(--base03); */
       color: inherit;
       background-color: var(--red);
     }
-    // Other,  'x'
+    /* Other,  'x' */
     .esc, .x {
       color: inherit;
       background-color: var(--violet);
     }
 
-    // Keyword
+    /* Keyword */
     .k {
       color: var(--green);
     }
-    // Keyword.{Constant,Declaration}
+    /* Keyword.{Constant,Declaration} */
     .kc, .kd {
       color: var(--cyan);
     }
-    // Keyword.Namespace
+    /* Keyword.Namespace */
     .kn {
       color: var(--orange);
     }
-    // Keyword.Pseudo,      'kp'
-    // Keyword.Reserved,    'kr'
-    // Keyword.Type
+    /* Keyword.Pseudo,      'kp' */
+    /* Keyword.Reserved,    'kr' */
+    /* Keyword.Type */
     .kt {
       color: var(--yellow);
     }
-    // Keyword.Variable,    'kv'
-    // without Pygments
+    /* Keyword.Variable,    'kv' */
+    /* without Pygments */
     .kp {
       color: var(--cyan);
     }
-    // unknowns
+    /* unknowns */
     .kr, .kv {
       color: var(--green);
       background-color: var(--violet);
     }
 
-    // Name, 'n'
-    // Name.Attribute,    'na'
-    // Name.{Builtin{,.Pseudo},Class,Constant,Decorator,Entity,Exception,Function{,.Magic}}
+    /* Name, 'n' */
+    /* Name.Attribute,    'na' */
+    /* Name.{Builtin{,.Pseudo},Class,Constant,Decorator,Entity,Exception,Function{,.Magic}} */
     .nb, .bp, .nc, .no, .nd, .ni, .ne, .nf, .fm {
       color: var(--blue);
     }
-    // Name.Property,     'py'
-    // Name.{Label,Namespace}
+    /* Name.Property,     'py' */
+    /* Name.{Label,Namespace} */
     .nl, .nn {
       color: var(--blue);
     }
-    // Name.Other,        'nx'
-    // Name.{Tag,Variable}
+    /* Name.Other,        'nx' */
+    /* Name.{Tag,Variable} */
     .nt, .nv {
       color: var(--blue);
     }
-    // Name.Variable.Class,      'vc'
-    // Name.Variable.Global
+    /* Name.Variable.Class,      'vc' */
+    /* Name.Variable.Global */
     .vg {
       color: var(--blue);
     }
-    // Name.Variable.Instance,   'vi'
-    // Name.Variable.Magic
+    /* Name.Variable.Instance,   'vi' */
+    /* Name.Variable.Magic */
     .vm {
       color: var(--blue);
     }
-    // without Pygments
+    /* without Pygments */
     .n {
       color: inherit;
       background-color: var(--base02);
@@ -136,193 +127,193 @@ div.highlight > pre.highlight {
     .na {
       color: var(--yellow);
     }
-    // unknowns
+    /* unknowns */
     .py, .nx, .vc, .vi {
       color: inherit;
       background-color: var(--violet);
     }
 
-    // Literal,      'l'
-    // Literal.Date,       'ld'
-    // without Pygments
-    // unknowns
+    /* Literal,      'l' */
+    /* Literal.Date,       'ld' */
+    /* without Pygments */
+    /* unknowns */
     .l, .ld {
       color: inherit;
       background-color: var(--violet);
     }
 
-    // Literal.String
+    /* Literal.String */
     .s {
       color: var(--cyan);
     }
-    // Literal.String.Affix,     'sa'
-    // Literal.String.Backtick,  'sb'
-    // Literal.String.Char,      'sc'
-    // Literal.String.Delimiter, 'dl'
-    // Literal.String.Doc
+    /* Literal.String.Affix,     'sa' */
+    /* Literal.String.Backtick,  'sb' */
+    /* Literal.String.Char,      'sc' */
+    /* Literal.String.Delimiter, 'dl' */
+    /* Literal.String.Doc */
     .sd {
       color: var(--base01);
     }
-    // Literal.String.Double,    's2'
-    // Literal.String.Escape,    'se'
-    // Literal.String.Heredoc,   'sh'
-    // Literal.String.Interpol,  'si'
-    // Literal.String.Other,     'sx'
-    // Literal.String.Regex
+    /* Literal.String.Double,    's2' */
+    /* Literal.String.Escape,    'se' */
+    /* Literal.String.Heredoc,   'sh' */
+    /* Literal.String.Interpol,  'si' */
+    /* Literal.String.Other,     'sx' */
+    /* Literal.String.Regex */
     .sr {
       color: var(--orange);
     }
-    // Literal.String.Single,    's1'
-    // Literal.String.Symbol,    'ss'
-    // without Pygments
+    /* Literal.String.Single,    's1' */
+    /* Literal.String.Symbol,    'ss' */
+    /* without Pygments */
     .s1, .s2 {
       color: var(--magenta);
     }
     .ss {
       color: var(--blue);
     }
-    // unknowns
+    /* unknowns */
     .sa, .sb, .sc, .dl, .se, .sh, .si, .sx {
       color: var(--cyan);
       background-color: var(--violet);
     }
 
-    // Literal.Number
+    /* Literal.Number */
     .m {
       color: var(--cyan);
     }
-    // Literal.Number.Bin,      'mb'
-    // Literal.Number.Float,    'mf'
-    // Literal.Number.Hex,      'mh'
-    // Literal.Number.Integer,  'mi'
-    // Literal.Number.Integer.Long,   'il'
-    // Literal.Number.Oct,      'mo'
-    // Literal.Number.Other,    'mx'
-    // without Pygments
+    /* Literal.Number.Bin,      'mb' */
+    /* Literal.Number.Float,    'mf' */
+    /* Literal.Number.Hex,      'mh' */
+    /* Literal.Number.Integer,  'mi' */
+    /* Literal.Number.Integer.Long,   'il' */
+    /* Literal.Number.Oct,      'mo' */
+    /* Literal.Number.Other,    'mx' */
+    /* without Pygments */
     .mi {
       color: var(--cyan);
     }
-    // unknowns
+    /* unknowns */
     .mb, .mf, .mh, .il, .mo, .mx {
       color: var(--cyan);
       background-color: var(--violet);
     }
 
-    // Operator
+    /* Operator */
     .o {
       color: var(--base01);
     }
-    // Operator.Word
+    /* Operator.Word */
     .ow {
       color: var(--orange);
     }
 
-    // Punctuation, 'p'
-    // Punctuation.Indicator, 'pi'
-    // without Pygments
+    /* Punctuation, 'p' */
+    /* Punctuation.Indicator, 'pi' */
+    /* without Pygments */
     .p, .pi {
       color: inherit;
     }
 
-    // Comment
+    /* Comment */
     .c {
       font-style: italic;
       color: var(--base01);
     }
-    // Comment.Hashbang
+    /* Comment.Hashbang */
     .ch {
       font-style: italic;
       color: var(--base01);
     }
-    // Comment.Doc,         'cd'
-    // Comment.Multiline
+    /* Comment.Doc,         'cd' */
+    /* Comment.Multiline */
     .cm {
       font-style: italic;
       color: var(--base01);
     }
-    // Comment.Preproc
+    /* Comment.Preproc */
     .cp {
       font-style: normal;
       color: var(--magenta);
     }
-    // Comment.PreprocFile
+    /* Comment.PreprocFile */
     .cpf {
       font-style: normal;
       color: var(--base01);
     }
-    // Comment.Single,      'c1'
-    // Comment.Special,     'cs'
-    // without Pygments
+    /* Comment.Single,      'c1' */
+    /* Comment.Special,     'cs' */
+    /* without Pygments */
     .c1 {
       font-style: italic;
       font-weight: lighter;
       color: var(--base00);
     }
-    // unknowns
+    /* unknowns */
     .cd, .cs {
       font-style: italic;
       color: var(--base01);
       background-color: var(--violet);
     }
 
-    // Generic
+    /* Generic */
     .g {
       color: var(--base0);
     }
-    // Generic.Deleted
+    /* Generic.Deleted */
     .gd {
       color: var(--red);
 
       background-image: linear-gradient(to right, currentColor -75ex, transparent 30ex, transparent);
       background-color: transparent;
     }
-    // Generic.Emph
+    /* Generic.Emph */
     .ge {
       font-style: italic;
       color: var(--base0);
     }
-    // Generic.Error
+    /* Generic.Error */
     .gr {
       color: var(--red);
     }
-    // Generic.Heading
+    /* Generic.Heading */
     .gh {
       font-weight: bold;
       color: var(--base0);
     }
-    // Generic.Inserted
+    /* Generic.Inserted */
     .gi {
       color: var(--green);
 
       background-image: linear-gradient(to right, currentColor -75ex, transparent 30ex, transparent);
       background-color: transparent;
     }
-    // Generic.Output
+    /* Generic.Output */
     .go {
       color: var(--base0);
     }
-    // Generic.Prompt
+    /* Generic.Prompt */
     .gp {
       font-weight: bold;
       color: var(--blue);
     }
-    // Generic.Strong
+    /* Generic.Strong */
     .gs {
       font-weight: bold;
       color: var(--base0);
     }
-    // Generic.Subheading
+    /* Generic.Subheading */
     .gu {
       text-decoration: underline;
       color: var(--base0);
     }
-    // Generic.Traceback
+    /* Generic.Traceback */
     .gt {
       color: var(--blue);
     }
-    // Generic.Lineno,     'gl'
-    // without Pygments
-    // unknowns
+    /* Generic.Lineno,     'gl' */
+    /* without Pygments */
+    /* unknowns */
     .gl {
       color: var(--base0);
       background-color: var(--violet);
@@ -361,14 +352,24 @@ div.highlighter-rouge {
   > div.highlight {
     background-color: transparent;
 
+    margin-bottom: 1rem;
+
     > pre.highlight {
+      font-size: 85%;
+      line-height: 1.3;
+
       padding: var(--padding-y) var(--padding-x);
+      margin: 0;
 
       overflow-x: auto;
 
       > code {
         padding: 0;
         margin: 0;
+
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
 
         > span.line {
           padding-right: var(--padding-x);

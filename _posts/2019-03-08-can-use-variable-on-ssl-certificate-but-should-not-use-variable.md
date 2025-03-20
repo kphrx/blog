@@ -3,6 +3,7 @@ category: tech
 date: '2019-03-08 20:17:37 +0900'
 redirect_from:
   - /blog/can-use-variable-on-ssl-certificate-but-should-not-use-variable
+hasCodeSnippet: true
 ---
 
 # Nginxのssl_certificateでの変数は使い物にならない
