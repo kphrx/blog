@@ -1,6 +1,9 @@
 title: kPherox Blog
 description: My Notes
 
+url: https://kphrx.github.io
+baseurl: /blog
+
 pagination:
   enabled: true
   sort_reverse: true
