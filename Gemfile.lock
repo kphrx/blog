@@ -138,5 +138,8 @@ DEPENDENCIES
   jekyll-titles-from-headings (~> 0.5)
   webrick (~> 1.9)
 
+RUBY VERSION
+   ruby 3.4.2p28
+
 BUNDLED WITH
-   2.5.1
+   2.6.6

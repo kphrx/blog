@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby file: ".ruby-version"
+
 gem "jekyll", "~> 4.4"
 
 group :production, :jekyll_plugins do
