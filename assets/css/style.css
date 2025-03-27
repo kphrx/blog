@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #ddd;
+  --bg-color: #f8f8f8;
   --fg-color: #fff;
   --text-color: #24292e;
   --text-sub-color: #6e7781;
@@ -13,15 +13,14 @@
 
   @media (prefers-color-scheme: dark) {
     --bg-color: #000;
-    --fg-color: #222;
+    --fg-color: #171717;
     --text-color: #bebebe;
     --text-sub-color: #888f98;
     --text-accent-color: #76d603;
     --heading-color: #cdcdcd;
     --border-color: #4c4c4c;
     --symbol-color: #484f58;
-    --table-bg-color: #1c1c1c;
-    --table-bg-accent: #141414;
+    --table-bg-accent: #000;
     --table-border-color: #343434;
   }
 }
