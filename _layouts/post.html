@@ -15,11 +15,11 @@ layout: default
     </span>
     </p>
     <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.eye_catch %}
+    {%- if page.eye_catch %}
     <figure class="eye-catch">
       <img alt="eye catch" src="{{ page.eye_catch }}">
     </figure>
-    {% endif %}
+    {%- endif %}
   </header>
 
   {{ content }}

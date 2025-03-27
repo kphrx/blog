@@ -7,13 +7,13 @@ isPagenate: true
   <header>
     {{ content }}
 
-    {% if paginator.total_pages > 1 %}
+    {% if paginator.total_pages > 1 -%}
     <section class="position">
       Page: {{ paginator.page }} of {{ paginator.total_pages }}
     </section>
 
     {% include pagination.html %}
-    {% endif %}
+    {%- endif %}
   </header>
 
   <ul class="posts">
@@ -22,11 +22,11 @@ isPagenate: true
     <li><a href="{{ post.url | relative_url }}" title="{{ post.title }}">
       <article class="post">
         <header class="post-header">
-          {% if post.eye_catch %}
+          {%- if post.eye_catch %}
           <figure class="eye-catch">
             <img alt="eye catch" src="{{ post.eye_catch | relative_url }}">
           </figure>
-          {% endif %}
+          {%- endif %}
           <p class="post-meta">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</p>
           <h1 class="post-title">{{ post.title }}</h1>
         </header>
