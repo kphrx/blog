@@ -65,4 +65,5 @@ kramdown:
   # footnote_backlink: '&#x21A9;&#xFE0E;'
 
 feed:
+  posts_limit: 0
   excerpt_only: true
