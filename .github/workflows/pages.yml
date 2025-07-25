@@ -60,7 +60,9 @@ jobs:
             echo "Failed to update redirects via Cloudflare"
             exit 1
           fi
+          rm -f $(jq -r 'to_entries|"_site"+.[].key+".html"' _site/redirects.json)
           rm -f _site/redirects.json
+          find _site -empty -type d -delete
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
 
