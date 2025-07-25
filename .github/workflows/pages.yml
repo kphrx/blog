@@ -55,7 +55,7 @@ jobs:
             -X PUT \
             -H 'Content-Type: application/json' \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"redirect":{"source_url":.[0],"target_url":.[1]}})' _site/redirects.json)" | jq '.success')
+            -d "$(jq -cr 'to_entries|map(["${{ steps.pages.outputs.base_url }}"+.key,.value],["${{ steps.pages.outputs.base_url }}"+.key+".html",.value])|map({"redirect":{"source_url":.[0],"target_url":.[1]}})' _site/redirects.json)" | jq '.success')
           if [ "$success" != "true" ]; then
             echo "Failed to update redirects via Cloudflare"
             exit 1
