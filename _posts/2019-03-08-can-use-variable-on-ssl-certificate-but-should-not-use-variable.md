@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: NGINX
 date: '2019-03-08 20:17:37 +0900'
 redirect_from:
+  - /tech/can-use-variable-on-ssl-certificate-but-should-not-use-variable
   - /blog/can-use-variable-on-ssl-certificate-but-should-not-use-variable
 hasCodeSnippet: true
 ---

@@ -1,5 +1,6 @@
 ---
-category: tech
+category: Technology
+tags: macOS
 date: '2022-10-27 00:03:47 +0900'
 hasCodeSnippet: true
 ---

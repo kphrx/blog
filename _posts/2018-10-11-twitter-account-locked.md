@@ -1,8 +1,9 @@
 ---
-category: misc
+category: Memo
 eye_catch: /assets/images/eye-catch/blog/twitter-account-locked.png
 date: '2018-10-11 15:14:38 +0900'
 redirect_from:
+  - /misc/twitter-account-locked
   - /blog/twitter-account-locked
 ---
 

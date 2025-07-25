@@ -1,7 +1,8 @@
 ---
-category: misc
+category: Memo
 date: '2019-04-01 21:25:20 +0900'
 redirect_from:
+  - /misc/nowplayingtweet-new-release-and-milestone-0-6
   - /blog/nowplayingtweet-new-release-and-milestone-0-6
 ---
 

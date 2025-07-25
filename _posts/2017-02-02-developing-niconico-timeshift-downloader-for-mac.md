@@ -1,6 +1,9 @@
 ---
-category: macos
+category: Technology
+tags: macOS
 date: '2017-02-02 00:00:25 +0900'
+redirect_from:
+  - /macos/developing-niconico-timeshift-downloader-for-mac
 ---
 
 # Mac用のニコ生TSダウンローダー

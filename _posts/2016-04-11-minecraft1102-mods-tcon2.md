@@ -1,8 +1,10 @@
 ---
-category: game
+category: Game
+tags: Minecraft
 eye_catch: https://i.imgur.com/9LZ8GX9.png
 date: '2016-04-11 00:00:01 +0900'
 redirect_from:
+  - /game/minecraft1102-mods-tcon2
   - /games/minecraft/minecraft1102-mods-tcon2
   - /minecraft/minecraft1102-mods-tcon2
 ---

@@ -45,6 +45,7 @@ jobs:
       - name: Build Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" # defaults output to '/_site'
       - name: Update redirects via Cloudflare
+        if: github.event_name != 'pull_request'
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_LIST_ID: ${{ secrets.CLOUDFLARE_LIST_ID }}
@@ -59,7 +60,9 @@ jobs:
             echo "Failed to update redirects via Cloudflare"
             exit 1
           fi
+          rm -f $(jq -r 'to_entries|"_site"+.[].key+".html"' _site/redirects.json)
           rm -f _site/redirects.json
+          find _site -empty -type d -delete
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
 

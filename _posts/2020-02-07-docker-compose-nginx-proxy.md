@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: Docker NGINX
 date: '2020-02-07 21:21:13 +0900'
 redirect_from:
+  - /tech/docker-compose-nginx-proxy
   - /blog/docker-compose-nginx-proxy
 hasCodeSnippet: true
 ---

@@ -1,8 +1,10 @@
 ---
-category: game
+category: Game
+tags: KanColle
 eye_catch: /assets/images/eye-catch/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai.png
 date: '2018-10-11 14:47:09 +0900'
 redirect_from:
+  - /game/kanmusu-list-formatter-plugin-for-logbook-kai
   - /games/kancolle/kanmusu-list-formatter-plugin-for-logbook-kai
   - /kancolle/kanmusu-list-formatter-plugin-for-logbook-kai
 ---

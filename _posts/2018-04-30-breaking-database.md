@@ -1,7 +1,8 @@
 ---
-category: misc
+category: Memo
 date: '2018-04-30 19:57:35 +0900'
 redirect_from:
+  - /misc/breaking-database
   - /blog/breaking-database
 ---
 

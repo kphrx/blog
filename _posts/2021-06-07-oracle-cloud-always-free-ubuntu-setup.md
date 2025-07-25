@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: OracleCloudInfrastructure Ubuntu nftables
 date: '2021-06-07 02:50:15 +0900'
 redirect_from:
+  - /tech/oracle-cloud-always-free-ubuntu-setup
   - /blog/oracle-cloud-always-free-ubuntu-setup
 hasCodeSnippet: true
 ---

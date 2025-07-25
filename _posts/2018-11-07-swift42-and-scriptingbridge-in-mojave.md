@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: macOS Swift ScriptingBridge
 date: '2018-11-07 19:15:36 +0900'
 redirect_from:
+  - /tech/swift42-and-scriptingbridge-in-mojave
   - /coding/swift42-and-scriptingbridge-in-mojave
 hasCodeSnippet: true
 ---

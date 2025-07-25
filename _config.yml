@@ -2,7 +2,7 @@ title: kPherox Blog
 description: My Notes
 
 url: https://kphrx.github.io
-baseurl: /blog
+baseurl: /notes
 
 pagination:
   enabled: true
@@ -14,27 +14,27 @@ autopages:
   enabled: true
   tags:
     layouts:
-      - autopage.html
+      - autopage_tag.html
     title: "Posts tagged with :tag"
     permalink: /tag/:tag
     slugify:
       case: false
   categories:
     layouts:
-      - autopage.html
+      - autopage_category.html
     title: "Posts in category :cat"
-    permalink: /:cat
+    permalink: /category/:cat
     slugify:
       case: false
   collections:
     layouts:
-      - autopage.html
+      - autopage_collection.html
     title: "Posts in collection :coll"
     permalink: /collection/:coll
     slugify:
       case: false
 
-permalink: /:categories/:slug:output_ext
+permalink: /:slug:output_ext
 excerpt_separator: <!--more-->
 
 relative_links:

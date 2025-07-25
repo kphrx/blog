@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: macOS FFmpeg ALAC FLAC
 date: '2020-02-17 20:13:06 +0900'
 redirect_from:
+  - /tech/flac-to-alac-oneline-shell-command
   - /blog/flac-to-alac-oneline-shell-command
 hasCodeSnippet: true
 ---

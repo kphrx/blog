@@ -1,6 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: GoogleCloud Ubuntu ddclient
 date: '2023-08-17 23:47:47 +0900'
+redirect_from:
+  - /tech/google-cloud-ubuntu-add-ddclient-ppa-for-cloudflare
 hasCodeSnippet: true
 ---
 # Google Cloud の Compute で Ubuntu 22.04 (minimal) + ddclient + Cloudflare のセットアップ
