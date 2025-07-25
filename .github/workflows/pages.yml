@@ -54,7 +54,7 @@ jobs:
             -X PUT \
             -H 'Content-Type: application/json' \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"source_url":.[0],"target_url":.[1]})' _site/redirects.json)"
+            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"redirect":{"source_url":.[0],"target_url":.[1]}})' _site/redirects.json)"
           rm -f _site/redirects.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
