@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: HTML CSS
 date: '2018-10-12 18:08:07 +0900'
 redirect_from:
+  - /tech/add-line-number-to-pre-tag
   - /coding/add-line-number-to-pre-tag
 hasCodeSnippet: true
 ---

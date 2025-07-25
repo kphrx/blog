@@ -1,6 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: macOS
 date: '2023-06-05 02:34:21 +0900'
+redirect_from:
+  - /tech/fix-cant-control-screen-brightness-level-on-macos
 ---
 # macOS で画面の明るさを変更できなくなったときの対処メモ
 

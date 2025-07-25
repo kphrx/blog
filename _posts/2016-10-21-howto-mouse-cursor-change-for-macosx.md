@@ -1,6 +1,9 @@
 ---
-category: macos
+category: Technology
+tags: macOS
 date: '2016-10-21 00:00:10 +0900'
+redirect_from:
+  - /macos/howto-mouse-cursor-change-for-macosx
 ---
 
 # Mousecape – Mac OS X でマウスカーソルを変更する方法

@@ -1,7 +1,8 @@
 ---
-category: misc
+category: Memo
 date: '2019-11-30 00:18:33 +0900'
 redirect_from:
+  - /misc/change-vps-server
   - /blog/change-vps-server
 hasCodeSnippet: true
 ---

@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: Windows PowerShell
 date: '2018-10-11 17:49:17 +0900'
 redirect_from:
+  - /tech/clear-trash-with-shortcut
   - /windows/clear-trash-with-shortcut
 hasCodeSnippet: true
 ---

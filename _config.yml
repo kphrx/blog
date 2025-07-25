@@ -34,7 +34,7 @@ autopages:
     slugify:
       case: false
 
-permalink: /:categories/:slug:output_ext
+permalink: /:slug:output_ext
 excerpt_separator: <!--more-->
 
 relative_links:

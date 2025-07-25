@@ -1,6 +1,9 @@
 ---
-category: macos
+category: Technology
+tags: macOS
 date: '2018-02-06 00:00:54 +0900'
+redirect_from:
+  - /macos/nowplaying-tweet-for-mac
 hasCodeSnippet: true
 ---
 

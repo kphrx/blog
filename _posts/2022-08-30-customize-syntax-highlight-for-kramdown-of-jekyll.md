@@ -1,7 +1,9 @@
 ---
-category: tech
+category: Technology
+tags: Jekyll
 date: '2022-08-30 05:12:18 +0900'
 redirect_from:
+  - /tech/customize-syntax-highlight-for-kramdown-of-jekyll
   - /coding/customize-syntax-highlight-for-kramdown-of-jekyll
 hasCodeSnippet: true
 ---

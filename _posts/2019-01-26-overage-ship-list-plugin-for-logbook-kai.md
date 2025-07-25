@@ -1,7 +1,9 @@
 ---
-category: game
+category: Game
+tags: KanColle
 date: '2019-01-26 06:04:26 +0900'
 redirect_from:
+  - /game/overage-ship-list-plugin-for-logbook-kai
   - /games/kancolle/overage-ship-list-plugin-for-logbook-kai
   - /kancolle/overage-ship-list-plugin-for-logbook-kai
 ---

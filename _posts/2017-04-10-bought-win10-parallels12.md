@@ -1,7 +1,8 @@
 ---
-category: misc
+category: Memo
 date: '2017-04-10 00:00:14 +0900'
 redirect_from:
+  - /misc/bought-win10-parallels12
   - /blog/bought-win10-parallels12
 ---
 

@@ -1,8 +1,10 @@
 ---
-category: rip
+category: Memo
 hidden: true
 sitemap: false
 date: '2022-10-14 20:14:32 +0900'
+redirect_from:
+  - /rip/kusada-souta
 ---
 
 # 悔恨
