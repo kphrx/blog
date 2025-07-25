@@ -44,6 +44,18 @@ jobs:
           sed -i '/^url: /s#http.*#${{ steps.pages.outputs.origin }}#' _config.yml
       - name: Build Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" # defaults output to '/_site'
+      - name: Update redirects via Cloudflare
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_LIST_ID: ${{ secrets.CLOUDFLARE_LIST_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/rules/lists/$CLOUDFLARE_LIST_ID/items \
+            -X PUT \
+            -H 'Content-Type: application/json' \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"source_url":.[0],"target_url":.[1]})' _site/redirects.json)"
+          rm -f _site/redirects.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
 
