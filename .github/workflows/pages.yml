@@ -50,11 +50,15 @@ jobs:
           CLOUDFLARE_LIST_ID: ${{ secrets.CLOUDFLARE_LIST_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
-          curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/rules/lists/$CLOUDFLARE_LIST_ID/items \
+          success=$(curl https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/rules/lists/$CLOUDFLARE_LIST_ID/items \
             -X PUT \
             -H 'Content-Type: application/json' \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"redirect":{"source_url":.[0],"target_url":.[1]}})' _site/redirects.json)"
+            -d "$(jq -cr 'to_entries|map(["https://blog.kpherox.dev"+.key,.value],["https://blog.kpherox.dev"+.key+".html",.value])|map({"redirect":{"source_url":.[0],"target_url":.[1]}})' _site/redirects.json)" | jq '.success')
+          if [ "$success" != "true" ]; then
+            echo "Failed to update redirects via Cloudflare"
+            exit 1
+          fi
           rm -f _site/redirects.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3 # This will automatically upload an artifact from the '/_site' directory
