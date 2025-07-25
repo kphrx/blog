@@ -14,21 +14,21 @@ autopages:
   enabled: true
   tags:
     layouts:
-      - autopage.html
+      - autopage_tag.html
     title: "Posts tagged with :tag"
     permalink: /tag/:tag
     slugify:
       case: false
   categories:
     layouts:
-      - autopage.html
+      - autopage_category.html
     title: "Posts in category :cat"
-    permalink: /:cat
+    permalink: /category/:cat
     slugify:
       case: false
   collections:
     layouts:
-      - autopage.html
+      - autopage_collection.html
     title: "Posts in collection :coll"
     permalink: /collection/:coll
     slugify:
