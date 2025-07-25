@@ -45,6 +45,7 @@ jobs:
       - name: Build Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" # defaults output to '/_site'
       - name: Update redirects via Cloudflare
+        if: github.event_name != 'pull_request'
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_LIST_ID: ${{ secrets.CLOUDFLARE_LIST_ID }}
