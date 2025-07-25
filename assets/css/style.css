@@ -183,8 +183,9 @@ body {
         color: var(--text-color);
         font-weight: 500;
         > svg {
-          width: 18px;
-          height: 20px;
+          vertical-align: text-bottom;
+          width: 1.1em;
+          height: 1.1em;
         }
       }
     }

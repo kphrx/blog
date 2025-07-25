@@ -15,6 +15,14 @@ nav.pagination {
   }
 }
 
+h1.page-title {
+  > svg {
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+  }
+}
+
 ul.posts {
   display: flex;
   flex-direction: column;
