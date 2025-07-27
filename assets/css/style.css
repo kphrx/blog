@@ -229,14 +229,15 @@ body {
         }
       }
 
-      > .eye-catch {
+      > figure.eye-catch {
         margin: 0;
         width: 100%;
 
         > img {
           object-fit: contain;
           height: auto;
-          max-height: 50vh;
+          max-height: 15vh;
+          width: 100%;
         }
       }
     }

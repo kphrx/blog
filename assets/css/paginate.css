@@ -55,9 +55,10 @@ body .post {
       border: none;
     }
 
-    > .eye-catch {
+    > figure.eye-catch {
       float: right;
-      width: 32%;
+      padding-left: 1em;
+      width: fit-content;
       max-width: 320px;
 
       > img {
@@ -65,6 +66,7 @@ body .post {
         float: right;
         height: 96px;
         max-height: 96px;
+        width: fit-content;
       }
     }
 
