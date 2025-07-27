@@ -6,6 +6,18 @@ layout: default
   <header>
     <div class="metadata">
       <p class="publish"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
+      <ul class="tags">
+        {%- for cat in page.categories %}
+        <li class="category">
+          <a href="{{ cat | slugify | prepend: '/category/' | relative_url }}">{% octicon file-directory-fill height:24 fill:currentColor %} {{ cat }}</a>
+        </li>
+        {%- endfor %}
+        {%- for tag in page.tags %}
+        <li class="tag">
+          <a href="{{ tag | slugify | prepend: '/tag/' | relative_url }}">{% octicon tag height:24 fill:currentColor %} {{ tag }}</a>
+        </li>
+        {%- endfor %}
+      </ul>
       <p class="edit-history"><a href="{{ page.path | prepend: '/commits/master/' | prepend: site.github.repository_url }}" target="_blank" rel="noopener noreferrer">
         {% octicon history height:24 fill:currentColor %} History
       </a></p>

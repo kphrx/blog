@@ -67,6 +67,14 @@ body .post {
         max-height: 96px;
       }
     }
+
+    > .metadata > ul.tags {
+      justify-content: flex-start;
+
+      > li {
+        background-color: transparent;
+      }
+    }
   }
 
   > p {
