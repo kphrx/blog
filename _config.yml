@@ -7,7 +7,7 @@ pagination:
   enabled: true
   sort_reverse: true
   per_page: 8
-  permalink: page/:num.html
+  permalink: /page-:num.html
 
 autopages:
   enabled: true
