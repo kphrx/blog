@@ -1,13 +1,13 @@
 <nav class="pagination">
   <div class=back>
     {%- if paginator.previous_page_path == paginator.first_page_path %}
-    <a href="{{ paginator.previous_page_path }}" class=previous-first>
+    <a href="{{ paginator.previous_page_path | relative_url }}" class=previous-first>
       <span class=first>First</span>
       <span class=previous>Previous</span>
     </a>
     {%- elsif paginator.previous_page %}
-    <a href="{{ paginator.first_page_path }}" class=first>First</a>
-    <a href="{{ paginator.previous_page_path }}" class=previous>Previous</a>
+    <a href="{{ paginator.first_page_path | relative_url }}" class=first>First</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}" class=previous>Previous</a>
     {%- else %}
     <span class=first>First</span>
     <span class=previous>Previous</span>
@@ -15,13 +15,13 @@
   </div>
   <div class=fore>
     {%- if paginator.next_page_path == paginator.last_page_path %}
-    <a href="{{ paginator.next_page_path }}" class=next-last>
+    <a href="{{ paginator.next_page_path | relative_url }}" class=next-last>
       <span class=next>Next</span>
       <span class=last>Last</span>
     </a>
     {%- elsif paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class=next>Next</a>
-    <a href="{{ paginator.last_page_path }}" class=last>Last</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" class=next>Next</a>
+    <a href="{{ paginator.last_page_path | relative_url }}" class=last>Last</a>
     {%- else %}
     <span class=next>Next</span>
     <span class=last>Last</span>
