@@ -5,13 +5,16 @@ nav.pagination {
   justify-content: space-between;
 
   a {
-    background-color: var(--symbol-color);
     padding-inline: 1ex;
     border-radius: 1em;
-  }
 
-  div:is(.back, .fore) > span:where(.first, .previous, .next, .last) {
-    color: var(--text-sub-color);
+    &:not(:any-link) {
+      color: var(--text-sub-color);
+    }
+
+    &:any-link {
+      background-color: var(--symbol-color);
+    }
   }
 }
 
@@ -32,7 +35,7 @@ ul.posts {
   margin: 0;
   padding: 0;
 
-  li > a {
+  li > a:any-link {
     color: var(--text-color);
 
     &:hover {
