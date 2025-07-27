@@ -52,10 +52,6 @@ body {
   margin-inline: auto;
   padding-inline: 1rem;
 
-  .site-title, .page-title, .post-title {
-    color: var(--heading-color);
-  }
-
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.25;
 
@@ -67,21 +63,13 @@ body {
     border-bottom-style: solid;
   }
 
-  .site-title {
+  > header > h1 {
+    color: var(--heading-color);
     font-size: 2rem;
 
-    > a {
+    > a:any-link {
       color: inherit;
     }
-  }
-
-  .page-title {
-    text-transform: uppercase;
-  }
-
-  .post-title, .page-title {
-    margin-top: 0;
-    font-size: 1.8rem;
   }
 
   p {
@@ -174,32 +162,59 @@ body {
   .post, .page {
     background: var(--fg-color);
     padding: 1em;
-  }
 
-  .post-header {
-    > .post-meta {
-      margin-bottom: 0;
-      > .post-edit-history > a {
-        color: var(--text-color);
-        font-weight: 500;
-        > svg {
-          vertical-align: text-bottom;
-          width: 1.1em;
-          height: 1.1em;
+    > header {
+      > h1 {
+        color: var(--heading-color);
+        margin-top: 0;
+        font-size: 1.8rem;
+      }
+
+      > .metadata {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: space-between;
+
+        > p.publish {
+          margin-bottom: 0;
+        }
+
+        > p.edit-history {
+          margin-bottom: 0;
+          font-weight: 500;
+          line-height: 1.2;
+          padding: 2px 5px;
+          border: 1px solid var(--border-color);
+          border-radius: 3px;
+          background-color: var(--table-border-color);
+
+          > a:not(:hover) {
+            color: var(--text-color);
+          }
+
+          svg {
+            vertical-align: bottom;
+            width: 1.1em;
+            height: 1.1em;
+          }
+        }
+      }
+
+      > .eye-catch {
+        margin: 0;
+        width: 100%;
+
+        > img {
+          object-fit: contain;
+          height: auto;
+          max-height: 50vh;
         }
       }
     }
+  }
 
-    > .eye-catch {
-      margin: 0;
-      width: 100%;
-
-      > img {
-        object-fit: contain;
-        height: auto;
-        max-height: 50vh;
-      }
-    }
+  .page > header > h1 {
+    text-transform: uppercase;
   }
 
   .anchorjs-link, .reversefootnote {

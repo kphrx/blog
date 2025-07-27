@@ -35,11 +35,11 @@
 {% include meta.html %}
   </head>
   <body>
-    <header class=site-header>
+    <header>
       {%- if site.title and site.title != page.title %}
-      <h1 class="site-title"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+      <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
       {%- else %}
-      <h1 class="site-title">{{ site.title }}</h1>
+      <h1>{{ site.title }}</h1>
       {%- endif %}
     </header>
 

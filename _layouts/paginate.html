@@ -21,14 +21,16 @@ isPagenate: true
     {% for post in paginator.posts %}
     <li><a href="{{ post.url | relative_url }}" title="{{ post.title }}">
       <article class="post">
-        <header class="post-header">
+        <header>
           {%- if post.eye_catch %}
           <figure class="eye-catch">
             <img alt="eye catch" src="{{ post.eye_catch | relative_url }}">
           </figure>
           {%- endif %}
-          <p class="post-meta">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</p>
-          <h1 class="post-title">{{ post.title }}</h1>
+          <div class="metadata">
+            <p class="publish"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
+          </div>
+          <h1>{{ post.title }}</h1>
         </header>
         {{ post.excerpt }}
       </article>

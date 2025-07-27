@@ -18,7 +18,7 @@ nav.pagination {
   }
 }
 
-h1.page-title {
+.page > header h1 {
   > svg {
     vertical-align: middle;
     width: 1em;
@@ -48,19 +48,19 @@ ul.posts {
   }
 }
 
-.post {
-  .post-header {
-    & > .post-title {
+body .post {
+  > header {
+    > h1 {
       margin-bottom: 0;
       border: none;
     }
 
-    & > .eye-catch {
+    > .eye-catch {
       float: right;
       width: 32%;
       max-width: 320px;
 
-      & > img {
+      > img {
         object-fit: cover;
         float: right;
         height: 96px;
@@ -70,6 +70,6 @@ ul.posts {
   }
 
   > p {
-    margin-bottom: 0
+    margin-bottom: 0;
   }
 }
