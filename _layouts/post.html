@@ -5,16 +5,16 @@ layout: default
 <main class="post">
   <header>
     <div class="metadata">
-      <p class="publish"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
+      <p class="published-at">{% octicon pencil height:16 fill:currentColor aria-label:"published at" %} <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
       <ul class="tags">
         {%- for cat in page.categories %}
         <li class="category">
-          <a href="{{ cat | slugify | prepend: '/category/' | relative_url }}">{% octicon file-directory-fill height:16 fill:currentColor %} {{ cat }}</a>
+          <a href="{{ cat | slugify | prepend: '/category/' | relative_url }}">{% octicon file-directory-fill height:16 fill:currentColor aria-label:category %} {{ cat }}</a>
         </li>
         {%- endfor %}
         {%- for tag in page.tags %}
         <li class="tag">
-          <a href="{{ tag | slugify | prepend: '/tag/' | relative_url }}">{% octicon tag height:16 fill:currentColor %} {{ tag }}</a>
+          <a href="{{ tag | slugify | prepend: '/tag/' | relative_url }}">{% octicon tag height:16 fill:currentColor aria-label:tag %} {{ tag }}</a>
         </li>
         {%- endfor %}
       </ul>
@@ -31,4 +31,11 @@ layout: default
   </header>
 
   {{ content }}
+
+  <footer>
+    <p class="last-modified-at">{% octicon diff-modified height:16 fill:currentColor aria-label:"last modified at" %} <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
+    <p class="edit-history"><a href="{{ page.path | prepend: '/commits/master/' | prepend: site.github.repository_url }}" target="_blank" rel="noopener noreferrer">
+      {% octicon history height:16 fill:currentColor %} History
+    </a></p>
+  </footer>
 </main>

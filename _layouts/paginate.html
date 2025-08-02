@@ -28,13 +28,13 @@ isPagenate: true
           </figure>
           {%- endif %}
           <div class="metadata">
-            <p class="publish"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
+            <p class="published-at">{% octicon pencil height:16 fill:currentColor aria-label:"published at" %} <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
             <ul class="tags">
               {%- for cat in post.categories %}
-              <li class="category">{% octicon file-directory-fill height:16 fill:currentColor %} {{ cat }}</li>
+              <li class="category">{% octicon file-directory-fill height:16 fill:currentColor aria-label:category %} {{ cat }}</li>
               {%- endfor %}
               {%- for tag in post.tags %}
-              <li class="tag">{% octicon tag height:16 fill:currentColor %} {{ tag }}</li>
+              <li class="tag">{% octicon tag height:16 fill:currentColor aria-label:tag %} {{ tag }}</li>
               {%- endfor %}
             </ul>
           </div>
