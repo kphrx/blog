@@ -6,10 +6,14 @@ module JekyllOcticonsReuseSymbol
 
     page = context["page"]
     page_url = if page.key?(:url) then page.url else page["url"] end
-    @count[page_url] ||= 0
-    @count[page_url] += 1
+    @count[page_url] ||= {}
 
-    if @count[page_url] > 1
+    octicon = ::Octicons::Octicon.new(@symbol, @options)
+    height = octicon.height
+    @count[page_url][height] ||= 0
+    @count[page_url][height] += 1
+
+    if @count[page_url][height] > 1
       ::Octicons::Octicon.new(@symbol, @options).to_use_svg
     else
       ::Octicons::Octicon.new(@symbol, @options).to_symbol_use_svg
@@ -18,11 +22,16 @@ module JekyllOcticonsReuseSymbol
 end
 
 module OcticonSymbolUse
-  def to_symbol_use_svg
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" #{html_attributes}><symbol id=\"octicon-#{@symbol}\" viewBox=\"#{viewbox}\">#{@path}</symbol><use xlink:href=\"#octicon-#{@symbol}\" /></svg>"
+  def height
+    @height
   end
+
+  def to_symbol_use_svg
+    "<svg #{html_attributes}><symbol id=\"octicon-#{@symbol}-#{@height}\" viewBox=\"#{viewbox}\">#{@path}</symbol><use href=\"#octicon-#{@symbol}-#{@height}\" /></svg>"
+  end
+
   def to_use_svg
-    "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" #{html_attributes}><use xlink:href=\"#octicon-#{@symbol}\" /></svg>"
+    "<svg #{html_attributes}><use href=\"#octicon-#{@symbol}-#{@height}\" /></svg>"
   end
 end
 
