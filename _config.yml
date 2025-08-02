@@ -1,8 +1,5 @@
 title: Notes | kpherox[.]dev
 
-url: https://kphrx.github.io
-baseurl: /notes
-
 pagination:
   enabled: true
   sort_reverse: true
