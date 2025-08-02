@@ -31,10 +31,10 @@ isPagenate: true
             <p class="publish"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}</time></p>
             <ul class="tags">
               {%- for cat in post.categories %}
-              <li class="category">{% octicon file-directory-fill height:24 fill:currentColor %} {{ cat }}</li>
+              <li class="category">{% octicon file-directory-fill height:16 fill:currentColor %} {{ cat }}</li>
               {%- endfor %}
               {%- for tag in post.tags %}
-              <li class="tag">{% octicon tag height:24 fill:currentColor %} {{ tag }}</li>
+              <li class="tag">{% octicon tag height:16 fill:currentColor %} {{ tag }}</li>
               {%- endfor %}
             </ul>
           </div>

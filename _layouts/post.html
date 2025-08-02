@@ -9,17 +9,17 @@ layout: default
       <ul class="tags">
         {%- for cat in page.categories %}
         <li class="category">
-          <a href="{{ cat | slugify | prepend: '/category/' | relative_url }}">{% octicon file-directory-fill height:24 fill:currentColor %} {{ cat }}</a>
+          <a href="{{ cat | slugify | prepend: '/category/' | relative_url }}">{% octicon file-directory-fill height:16 fill:currentColor %} {{ cat }}</a>
         </li>
         {%- endfor %}
         {%- for tag in page.tags %}
         <li class="tag">
-          <a href="{{ tag | slugify | prepend: '/tag/' | relative_url }}">{% octicon tag height:24 fill:currentColor %} {{ tag }}</a>
+          <a href="{{ tag | slugify | prepend: '/tag/' | relative_url }}">{% octicon tag height:16 fill:currentColor %} {{ tag }}</a>
         </li>
         {%- endfor %}
       </ul>
       <p class="edit-history"><a href="{{ page.path | prepend: '/commits/master/' | prepend: site.github.repository_url }}" target="_blank" rel="noopener noreferrer">
-        {% octicon history height:24 fill:currentColor %} History
+        {% octicon history height:16 fill:currentColor %} History
       </a></p>
     </div>
     <h1>{{ page.title }}</h1>
