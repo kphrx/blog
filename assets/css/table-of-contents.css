@@ -3,9 +3,13 @@
   border: 1px solid var(--border-color);
   width: fit-content;
 
+  ol > li::marker {
+    content: counters(list-item, '.') '. ';
+  }
+
   #markdown-toc {
     margin: 0;
-    list-style: inside;
     padding: 0;
+    list-style-position: inside;
   }
 }
