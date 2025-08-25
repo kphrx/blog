@@ -3,6 +3,8 @@ category: Technology
 tags: macOS
 date: '2022-10-27 00:03:47 +0900'
 hasCodeSnippet: true
+redirect_from:
+  - /tech/create-line-seed-sans-font-cask
 ---
 # フォント『LINE Seed Sans』をHomebrew Caskで管理する
 
